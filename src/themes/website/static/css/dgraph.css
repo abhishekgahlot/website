@@ -1,0 +1,87 @@
+.header .logo {
+  width: 121px;
+  padding: 11px 0;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  z-index: 2;
+  right: 0;
+  left: 0;
+  background: #f9f9f9;
+}
+
+.hero {
+  position: relative;
+  z-index: 1;
+  background: #f9f9f9;
+}
+
+.hero:before,
+.hero:after {
+  background: inherit;
+  content: '';
+  display: block;
+  height: 50%;
+  left: 0;
+  position: absolute;
+  right: 0;
+  z-index: -1;
+  -webkit-backface-visibility: hidden; // for Chrome Windows
+}
+
+.hero:before {
+  top: 0;
+  transform: skewY(1.5deg);
+  transform-origin: 100% 0;
+}
+
+.hero:after {
+  bottom: 0;
+  transform: skewY(177.5deg);
+  transform-origin: 100%;
+  box-shadow: 1px 4px 6px #e4e4e4;
+}
+
+.hero {
+  text-align: center;
+  font-family: 'Fira Sans', sans-serif;
+  margin: 50px 0;
+  padding: 13% 20px 16%;
+}
+
+.hero .main-heading {
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: .02em;
+  line-height: 1.3;
+  color: #F96319;
+  font-size: 3.3em;
+}
+
+.hero .main-desc {
+  font-size: 1.8em;
+  margin: 0 246px 21px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding-bottom: 12px;
+}
+
+.hero .actions {
+
+}
+
+.dg-btn {
+  border: 1px solid #86c53d;
+  padding: 19px 28px;
+  border-radius: 26px;
+  color: white;
+  background: #86c53d;
+  font-size: 13px;
+  letter-spacing: 0.8px;
+}
+
+.dg-btn-try {
+  text-transform: uppercase;
+}
