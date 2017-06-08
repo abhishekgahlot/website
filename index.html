@@ -49,11 +49,11 @@
   <!--modernizr-->
   <script type="text/javascript" src="assets/js/modernizr.min.js"></script>
   <!--[if lt IE 9] <script src="assets/js/ie.min.js"></script> ![endif]-->
-  
+
 </head>
 <body class="homepage">
   <!-- SVG holder is included via svg-local-storage script-->
-  <!--[if lt IE 9] 
+  <!--[if lt IE 9]
   <div class="browsehappy"> <a href="#" class="browsehappy__dismiss">Dismiss</a>
   	<h2 class="browsehappy__title">Your browser is not currently supported</h2>
   	<p>But there’s an easy fix! This web site works on a wide range of browsers. Click one of the buttons below and follow the instructions.</p>
@@ -64,41 +64,30 @@
   		<li class="browsehappy__item"><a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie" target="_blank" class="button browsehappy__button">Download Internet Explorer</a></li>
   	</ul>
   </div> ![endif]
-  
+
   -->
-  <header id="page-header" class="page-header page-header--alternate">
+  <nav class="page-header__header">
     <div class="container">
-      <div class="row">
-        <div class="col-12 col-desktop-4 hide-desktop">
-          <figure class="page-logo"><a href="index.html"><img src="assets/images/logo.svg" width="233" height="70" alt=""></a></figure>
+      <div class="page-header__content"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo">
+        <div class="page-header__actions">
+          <ul class="page-header__menu-list">
+            <li class="page-header__menu-item"><a href="https://docs.dgraph.io" target="_blank"> <span class="label">Docs</span></a></li>
+            <li class="page-header__menu-item"><a href="https://open.dgraph.io" target="_blank"><span class="label">Blog</span></a></li>
+            <li class="page-header__menu-item"><a href="https://discuss.dgraph.io" target="_blank"><span class="label">Forum</span></a></li>
+            <li class="page-header__menu-item"><a href="https://slack.dgraph.io" target="_blank"><span class="label">Slack</span></a></li>
+          </ul><a href="#" class="page-header__cta btn btn-cta">Install</a>
         </div>
-        <div class="col-12 col-desktop-8 push-desktop-4">
-          <nav class="page-nav">
-            <ul class="page-nav__list page-nav__list--alternate">
-              <li class="page-nav__item"><a href="https://docs.dgraph.io" title="Offical documentation for Dgraph." target="_blank" class="page-nav__link link-alias">Documentation</a></li>
-              <li class="page-nav__item"><a href="https://open.dgraph.io" title="Thoughts on usage of graph database." class="page-nav__link link-alias">Blog</a></li>
-              <li class="page-nav__item"><a href="https://discuss.dgraph.io" title="Head over to our Discourse community" target="_blank" class="page-nav__link link-alias">Discourse</a></li>
-              <li class="page-nav__item"><a href="https://slack.dgraph.io/" title="Head over to our Slack community" target="_blank" class="page-nav__link link-alias">Slack</a></li>
-              <li class="page-nav__item"><a href="https://docs.dgraph.io" title="Download Dgraph" target="_blank" class="button button--outline page-nav__link page-nav__link--button">Download</a></li>
-              <li class="page-nav__item"><a href="https://github.com/dgraph-io/dgraph" data-style="mega" data-count-href="/dgraph-io/dgraph/stargazers" data-count-api="/repos/dgraph-io/dgraph#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star dgraph-io/dgraph on GitHub" class="github-button">Star</a></li>
-            </ul>
-            <div class="github-star--mobile"><a href="https://github.com/dgraph-io/dgraph" data-style="mega" data-count-href="/dgraph-io/dgraph/stargazers" data-count-api="/repos/dgraph-io/dgraph#stargazers_count" data-count-aria-label="# stargazers on GitHub" aria-label="Star dgraph-io/dgraph on GitHub" class="github-button">Star</a></div>
-          </nav>
-        </div><a href="javascript:void(0)" title="Site Navigation" id="page-nav-button" class="button page-nav-button">Menu</a>
       </div>
     </div>
-  </header>
+  </nav>
   <!-- / page-header-->
   <section class="page-intro page-intro--homepage">
     <div class="container">
       <div class="row">
-        <div class="col-12 col-desktop-4 hide-mobile show-desktop">
-          <figure class="page-intro__figure page-intro__figure--logo"><a href="index.html"><img src="assets/images/logo.svg" alt="Dgraph logo – Fastest graph database in the market."></a></figure>
-        </div>
-        <div class="col-12 col-desktop-7">
+        <div class="col-12">
           <header class="page-intro__header">
-            <h1 class="page-intro__title page-intro__title--emphasized">Fastest graph database in the market.</h1>
-            <p class="page-intro__lead">Meet Dgraph &mdash;  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production.</p>
+            <h1 class="page-intro__title page-intro__title--emphasized">Fastest graph database</h1>
+            <p class="page-intro__lead"><span class="page-intro__brand">Dgraph</span> is an open source, distributed, and highly available graph database, built to scale in production.</p>
           </header>
         </div>
       </div>
@@ -107,11 +96,6 @@
   <!-- / page-intro-->
   <div class="page-content page-content--homepage">
     <div class="demo__wrapper">
-      <div class="bolt-image__wrapper">
-        <div class="bolt-image bolt-image--top-front"></div>
-        <div class="bolt-image bolt-image--top-back"></div>
-      </div>
-      <!-- /.bolt-image__wrapper--top-->
       <div class="demo">
         <div class="container">
           <div class="row">
@@ -424,27 +408,58 @@
   <script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.0.min.js"><\/script>')</script>
 
   <script type="text/javascript">
-    //- // Cashing SVG Sprite in localStorage 
-    $(document).ready(function(){;(function(window,document)
-    {'use strict';
-    	// Change revision of svg icons every time you add new icons
-    	var file='assets/images/icons/svg-holder.html',
-    		revision=1;
-    if(!document.createElementNS||!document.createElementNS('http://www.w3.org/2000/svg','svg').createSVGRect){return true;}
-    var isLocalStorage='localStorage'in window&&window['localStorage']!==null,request,data,insertIT=function()
-    {document.body.insertAdjacentHTML('afterbegin',data);},insert=function()
-    {if(document.body){insertIT();}
-    else{document.addEventListener('DOMContentLoaded',insertIT);}};if(isLocalStorage&&localStorage.getItem('inlineSVGrev')===revision)
-    {data=localStorage.getItem('inlineSVGdata');if(data)
-    {insert();return true;}}
-    try
-    {request=new XMLHttpRequest();request.open('GET',file,true);request.onload=function()
-    {if(request.status>=200&&request.status<400)
-    {data=request.responseText;insert();if(isLocalStorage)
-    {localStorage.setItem('inlineSVGdata',data);localStorage.setItem('inlineSVGrev',revision);}}};request.send();}
-    catch(e){}}(window,document));});
-    
-  </script>
+  //- // Cashing SVG Sprite in localStorage
+$(document).ready(function() {
+  (function(window, document) {
+    "use strict";
+    // Change revision of svg icons every time you add new icons
+    var file = "assets/images/icons/svg-holder.html", revision = 1;
+    if (
+      !document.createElementNS ||
+      !document.createElementNS("http://www.w3.org/2000/svg", "svg")
+        .createSVGRect
+    ) {
+      return true;
+    }
+    var isLocalStorage =
+      "localStorage" in window && window["localStorage"] !== null,
+      request,
+      data,
+      insertIT = function() {
+        document.body.insertAdjacentHTML("afterbegin", data);
+      },
+      insert = function() {
+        if (document.body) {
+          insertIT();
+        } else {
+          document.addEventListener("DOMContentLoaded", insertIT);
+        }
+      };
+    if (isLocalStorage && localStorage.getItem("inlineSVGrev") === revision) {
+      data = localStorage.getItem("inlineSVGdata");
+      if (data) {
+        insert();
+        return true;
+      }
+    }
+    try {
+      request = new XMLHttpRequest();
+      request.open("GET", file, true);
+      request.onload = function() {
+        if (request.status >= 200 && request.status < 400) {
+          data = request.responseText;
+          insert();
+          if (isLocalStorage) {
+            localStorage.setItem("inlineSVGdata", data);
+            localStorage.setItem("inlineSVGrev", revision);
+          }
+        }
+      };
+      request.send();
+    } catch (e) {}
+  })(window, document);
+});
+</script>
   <!-- Minified script-->
   <script type="text/javascript" src="assets/js/script.min.js?v=20170105"></script>
   <!-- GitHub star button-->

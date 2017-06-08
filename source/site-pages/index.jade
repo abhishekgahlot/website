@@ -6,7 +6,6 @@ append page-config
 	- var PageClass = 'homepage'
 	- var PageIntroClass = 'homepage'
 	- var PageContentClass = 'homepage'
-	- var MainHeader = false
 	- var AlternateHeader = true
 
 //- Begin
@@ -28,22 +27,15 @@ block partials
 block page-intro
 	.container
 		.row
-			.col-12.col-desktop-4.hide-mobile.show-desktop
-				figure.page-intro__figure.page-intro__figure--logo
-					a(href="index.html")
-						img(src="assets/images/logo.svg", alt="Dgraph logo – Fastest graph database in the market.")
-			.col-12.col-desktop-7
+			.col-12
 				header.page-intro__header
-					h1.page-intro__title.page-intro__title--emphasized Fastest graph database in the market.
-					p.page-intro__lead Meet Dgraph &mdash;  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production.
+					h1.page-intro__title.page-intro__title--emphasized Fastest graph database
+					p.page-intro__lead
+						span.page-intro__brand Dgraph
+						|  is an open source, distributed, and highly available graph database, built to scale in production.
 
 block page-content
 	.demo__wrapper
-		.bolt-image__wrapper
-			.bolt-image.bolt-image--top-front
-			.bolt-image.bolt-image--top-back
-		// /.bolt-image__wrapper--top
-
 		.demo
 			.container
 				.row

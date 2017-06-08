@@ -1,58 +1,23 @@
-if MainHeader
-	header#page-header.page-header
-		.container
-			.row
-				.col-12.col-desktop-4
-					figure.page-logo
-						a(href="index.html"): img(src="assets/images/logo.svg", width="233", height="70", alt="")
-				.col-12.col-desktop-8
-					nav.page-nav
-						ul.page-nav__list
-							li.page-nav__item
-								a(href="https://docs.dgraph.io" alt="Offical documentation for Dgraph." title="Offical documentation for Dgraph." target="_blank").page-nav__link.link-alias Documentation
-							li.page-nav__item
-								a(href="https://open.dgraph.io" alt="Thoughts on usage of graph database." title="Thoughts on usage of Dgraph." target="_blank").page-nav__link.link-alias Blog
-							li.page-nav__item
-								a(href="https://discuss.dgraph.io" alt="Head over to our Discourse community" title="Head over to our Discourse community" target="_blank").page-nav__link.link-alias Discourse
-							li.page-nav__item
-								a(href="https://slack.dgraph.io/" alt="Head over to our Slack community" title="Head over to our Slack community" target="_blank").page-nav__link.link-alias Slack
-							li.page-nav__item
-								a(href="https://docs.dgraph.io" title="Download Dgraph" target="_blank").button.button--outline.page-nav__link.page-nav__link--button Download
-							li.page-nav__item
-								include misc/git-hub-star
-						
-						.github-star--mobile
-							include misc/git-hub-star
-				
-				a(href="javascript:void(0)", title="Site Navigation")#page-nav-button.button.page-nav-button Menu
+nav.page-header__header
+	.container
+		.page-header__content
+			img.page-header__logo(src='assets/images/logo.png', alt='dgraph-logo')
 
-if AlternateHeader
-	header#page-header.page-header.page-header--alternate
-		.container
-			.row
-				.col-12.col-desktop-4.hide-desktop
-					figure.page-logo
-						a(href="index.html")
-							img(src="assets/images/logo.svg", width="233", height="70", alt="")
-				.col-12.col-desktop-8.push-desktop-4
-					nav.page-nav
-						ul.page-nav__list.page-nav__list--alternate
-							li.page-nav__item
-								a(href="https://docs.dgraph.io" title="Offical documentation for Dgraph." target="_blank").page-nav__link.link-alias Documentation
-							li.page-nav__item
-								a(href="https://open.dgraph.io" title="Thoughts on usage of graph database.").page-nav__link.link-alias Blog
-							li.page-nav__item
-								a(href="https://discuss.dgraph.io" title="Head over to our Discourse community" target="_blank").page-nav__link.link-alias Discourse
-							li.page-nav__item
-								a(href="https://slack.dgraph.io/" title="Head over to our Slack community" target="_blank").page-nav__link.link-alias Slack
-							li.page-nav__item
-								a(href="https://docs.dgraph.io" title="Download Dgraph" target="_blank").button.button--outline.page-nav__link.page-nav__link--button Download
-							li.page-nav__item
-								include misc/git-hub-star
-						
-						.github-star--mobile
-							include misc/git-hub-star
-				
-				a(href="javascript:void(0)", title="Site Navigation")#page-nav-button.button.page-nav-button Menu
+			.page-header__actions
+				ul.page-header__menu-list
+					li.page-header__menu-item
+						a(href="https://docs.dgraph.io" target="_blank") 
+							span.label Docs
+					li.page-header__menu-item
+						a(href="https://open.dgraph.io" target="_blank")
+							span.label Blog
+					li.page-header__menu-item
+						a(href="https://discuss.dgraph.io" target="_blank")
+							span.label Forum
+					li.page-header__menu-item
+						a(href="https://slack.dgraph.io" target="_blank")
+							span.label Slack
+
+				a.page-header__cta.btn.btn-cta(href="#") Install
 
 // / page-header
