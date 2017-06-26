@@ -3902,6 +3902,11 @@ img[data-src] {
 .page-header__cta {
   margin-left: 22px;
 }
+@media screen and (max-width: 767px) {
+  .page-header__cta {
+    margin-top: 10px;
+  }
+}
 /* ===========================================
    Footer styling
    =========================================== */
