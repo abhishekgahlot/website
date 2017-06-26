@@ -1316,9 +1316,6 @@ a:active {
           transform: translateX(5px);
   fill: #d64d05;
 }
-.link-alias:hover {
-  cursor: alias;
-}
 b,
 strong {
   font-weight: 700;
@@ -1562,47 +1559,6 @@ hr {
 @media screen and (max-width: 767px) {
   .demo {
     padding-top: 25px;
-  }
-}
-.demo__wrapper {
-  margin-bottom: 100px;
-  position: relative;
-}
-@media screen and (min-width: 600px) {
-  .demo__wrapper {
-    margin-bottom: 200px;
-  }
-}
-.demo__wrapper:before,
-.demo__wrapper:after {
-  content: '';
-  display: block;
-  width: 3500px;
-  height: 250px;
-  position: absolute;
-  background: #fff;
-  -webkit-transform: rotate(4deg);
-          transform: rotate(4deg);
-  left: -10%;
-  right: 0;
-  z-index: 4;
-  pointer-events: none;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
-}
-.demo__wrapper:before {
-  top: -110px;
-}
-@media screen and (max-width: 989px) {
-  .demo__wrapper:before {
-    top: 40px;
-  }
-}
-.demo__wrapper:after {
-  bottom: -110px;
-}
-@media screen and (max-width: 989px) {
-  .demo__wrapper:after {
-    bottom: -120px;
   }
 }
 .demo-console__header {
@@ -2100,19 +2056,23 @@ hr {
 }
 .bolt-image--bottom-front:before {
   bottom: -600px;
-  left: -200px;
+  left: 603px;
   width: 1000px;
   height: 1150px;
   background: url('../images/homepage/bolt__bottom--front.png');
   z-index: 2;
+  -webkit-transform: rotate(-78deg);
+          transform: rotate(-78deg);
 }
 .bolt-image--bottom-back:before {
   bottom: -600px;
-  left: -220px;
+  left: 581px;
   width: 1000px;
   height: 1150px;
   background: url('../images/homepage/bolt__bottom--back.png');
   z-index: 1;
+  -webkit-transform: rotate(-78deg);
+          transform: rotate(-78deg);
 }
 /* ===========================================
    About page styling
@@ -3849,6 +3809,16 @@ img[data-src] {
 .page-header {
   border-bottom: 1px solid gray;
 }
+.page-header__header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: white;
+  z-index: 99;
+  opacity: 0.8;
+  border-bottom: 1px solid #fbfbfb;
+}
 .page-header__logo {
   width: 115px;
 }
@@ -3996,17 +3966,23 @@ img[data-src] {
    Page intro styling
    =========================================== */
 .page-intro {
-  margin-top: 30px;
+  margin-top: 178px;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 989px) {
   .page-intro {
-    margin-top: 100px;
+    margin-top: 178px;
     margin-bottom: 100px;
   }
 }
 .page-intro__header {
   text-align: center;
+}
+.page-intro__header-content {
+  position: absolute;
+  z-index: 10;
+  margin-left: auto;
+  margin-right: auto;
 }
 .page-intro__title {
   font-size: 34px;
@@ -4028,7 +4004,7 @@ img[data-src] {
 .page-intro__title--emphasized {
   font-size: 28px;
   font-size: 1.75rem;
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   letter-spacing: .02em;
   line-height: 1.3;
@@ -4111,7 +4087,7 @@ img[data-src] {
 }
 @media screen and (min-width: 989px) {
   .page-intro--homepage {
-    min-height: 600px;
+    min-height: 308px;
   }
 }
 .page-intro--homepage .page-intro__lead {

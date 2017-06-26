@@ -15,42 +15,42 @@
     @media screen and (max-width: @tablet-breakpoint) {
         padding-top: @spacing-small;
     }
-    &__wrapper {
-        margin-bottom: 100px;
-        position: relative;
-        @media screen and (min-width: 600px) {
-            margin-bottom: 200px;
-        }
-        &:before,
-        &:after {
-            content: '';
-            display: block;
-            width: 3500px;
-            height: 250px;
-            position: absolute;
-            background: #fff;
-            transform: rotate(4deg);
-            left: -10%;
-            right: 0;
-            z-index: 4;
-            pointer-events: none;
-            box-shadow: 0 0 50px rgba(0, 0, 0, .15);
-        }
-        &:before {
-            // Top diagonal
-            top: -110px;
-            @media screen and (max-width: @desktop-breakpoint) {
-                top: 40px;
-            }
-        }
-        &:after {
-            // Bottom diagonal
-            bottom: -110px;
-            @media screen and (max-width: @desktop-breakpoint) {
-                bottom: -120px;
-            }
-        }
-    }
+    // &__wrapper {
+    //     margin-bottom: 100px;
+    //     position: relative;
+    //     @media screen and (min-width: 600px) {
+    //         margin-bottom: 200px;
+    //     }
+    //     &:before,
+    //     &:after {
+    //         content: '';
+    //         display: block;
+    //         width: 3500px;
+    //         height: 250px;
+    //         position: absolute;
+    //         background: #fff;
+    //         transform: rotate(4deg);
+    //         left: -10%;
+    //         right: 0;
+    //         z-index: 4;
+    //         pointer-events: none;
+    //         box-shadow: 0 0 50px rgba(0, 0, 0, .15);
+    //     }
+    //     &:before {
+    //         // Top diagonal
+    //         top: -110px;
+    //         @media screen and (max-width: @desktop-breakpoint) {
+    //             top: 40px;
+    //         }
+    //     }
+    //     &:after {
+    //         // Bottom diagonal
+    //         bottom: -110px;
+    //         @media screen and (max-width: @desktop-breakpoint) {
+    //             bottom: -120px;
+    //         }
+    //     }
+    // }
 }
 
 .demo-console {
@@ -487,21 +487,23 @@
     &--bottom-front {
         &:before {
             bottom: -600px;
-            left: -200px;
+            left: 603px;
             width: 1000px;
             height: 1150px;
             background: url('../images/homepage/bolt__bottom--front.png');
             z-index: 2;
+            transform: rotate(-78deg);
         }
     }
     &--bottom-back {
         &:before {
             bottom: -600px;
-            left: -220px;
+            left: 581px;
             width: 1000px;
             height: 1150px;
             background: url('../images/homepage/bolt__bottom--back.png');
             z-index: 1;
+            transform: rotate(-78deg);
         }
     }
 }

@@ -28,17 +28,50 @@ block page-intro
 	.container
 		.row
 			.col-12
-				header.page-intro__header
-					h1.page-intro__title.page-intro__title--emphasized Fastest graph database
-					p.page-intro__lead
-						span.page-intro__brand Dgraph
-						|  is an open source, distributed, and highly available graph database, built to scale horizontally.
+				.bolt-image__wrapper
+					.bolt-image.bolt-image--bottom-front
+					.bolt-image.bolt-image--bottom-back
+				// /.bolt-image__wrapper--bottom
 				
-				.page-intro__actions
-					a.btn.btn-main.page-intro__cta.page-intro__cta-install(href="#") Try it
-					a.btn.btn-transparent.page-intro__cta.page-intro__cta-learn(href="#") Learn more
+				.page-intro__header-content
+					header.page-intro__header
+						h1.page-intro__title.page-intro__title--emphasized Fastest graph database
+						p.page-intro__lead
+							span.page-intro__brand Dgraph
+							|  is an open source, distributed, and highly available graph database, built to scale horizontally.
+					
+					.page-intro__actions
+						a.btn.btn-main.page-intro__cta.page-intro__cta-install(href="https://docs.dgraph.io/get-started/") Try it
+						a.btn.btn-transparent.page-intro__cta.page-intro__cta-learn(href="https://tour.dgraph.io/") Take a tour
 
 block page-content
+
+	.container
+		.row
+			.col-12
+				.dg-features
+					ul.dg-features__list
+						li.dg-features__item
+							.dg-features__figure
+								img(src="assets/images/homepage/feature-01.svg", alt="Image for low latency, high throughput feature").dg-features__image
+							.dg-features__description
+								h4.dg-features__title Low Latency, High Throughput
+								p Low enough latency to serve real time queries over terabytes of structured data.
+						li.dg-features__item
+							.dg-features__figure
+								img(src="assets/images/homepage/feature-02.svg", alt="Image for distributed and scalable feature").dg-features__image
+							.dg-features__description
+								h4.dg-features__title Distributed and Scalable
+								p Easily scale to multiple machines thanks to the sharded storage and minimal network calls.
+						li.dg-features__item
+							.dg-features__figure
+								img(src="assets/images/homepage/feature-03.svg", alt="Image for open source feature").dg-features__image
+							.dg-features__description
+								h4.dg-features__title Open Source
+								p Written entirely in Go, Dgraph is available under open-source license.
+					// /.demo-features
+
+
 	.demo__wrapper
 		.demo
 			.container
@@ -56,39 +89,10 @@ block page-content
 
 						// /.demo-console
 
-						.dg-features
-							header.section-header
-								h3.section-header__title Why use Dgraph?
-
-							ul.dg-features__list
-								li.dg-features__item
-									.dg-features__figure
-										img(src="assets/images/homepage/feature-01.svg", alt="Image for low latency, high throughput feature").dg-features__image
-									.dg-features__description
-										h4.dg-features__title Low Latency, High Throughput
-										p Storage layer of Dgraph is designed for efficient retrieval, it offers low enough latency to be serving real time user queries, over terabytes of structured data.
-								li.dg-features__item
-									.dg-features__figure
-										img(src="assets/images/homepage/feature-02.svg", alt="Image for distributed and scalable feature").dg-features__image
-									.dg-features__description
-										h4.dg-features__title Distributed and Scalable
-										p Easily scale to multiple machines, or datacenters. Dgraph's sharded storage and query processing were specifically designed to minimize the number of network calls.
-								li.dg-features__item
-									.dg-features__figure
-										img(src="assets/images/homepage/feature-03.svg", alt="Image for open source feature").dg-features__image
-									.dg-features__description
-										h4.dg-features__title Open Source
-										p Written entirely in Go, Dgraph is available under open-source license.
-							// /.demo-features
-
 		// /.demo
 
-		.bolt-image__wrapper
-			.bolt-image.bolt-image--bottom-front
-			.bolt-image.bolt-image--bottom-back
-		// /.bolt-image__wrapper--bottom
-
 	// /.demo__wrapper
+
 	.usage
 		.container
 			.row
@@ -167,15 +171,15 @@ block page-content
 							h4.cta__title More information about Dgraph
 							ul.cta__more-list
 								li.cta__more-item
-									a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github.link-alias GitHub
+									a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github GitHub
 								li.cta__more-item
-									a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse.link-alias Discourse
+									a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse Discourse
 								li.cta__more-item
-									a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack.link-alias Slack
+									a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack Slack
 								li.cta__more-item
-									a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog.link-alias Blog
+									a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog Blog
 								li.cta__more-item
-									a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki.link-alias Documentation
+									a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki Documentation
 
 	// /.cta
 
