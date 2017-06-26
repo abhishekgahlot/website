@@ -68,14 +68,14 @@
   -->
   <nav class="page-header__header">
     <div class="container">
-      <div class="page-header__content"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo">
+      <div class="page-header__content"><a href="/"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo"></a>
         <div class="page-header__actions">
           <ul class="page-header__menu-list">
             <li class="page-header__menu-item"><a href="https://docs.dgraph.io" target="_blank"> <span class="label">Docs</span></a></li>
             <li class="page-header__menu-item"><a href="https://open.dgraph.io" target="_blank"><span class="label">Blog</span></a></li>
             <li class="page-header__menu-item"><a href="https://discuss.dgraph.io" target="_blank"><span class="label">Forum</span></a></li>
             <li class="page-header__menu-item"><a href="https://slack.dgraph.io" target="_blank"><span class="label">Slack</span></a></li>
-          </ul><a href="https://docs.dgraph.io/get-started/" class="page-header__cta btn btn-main btn-cta">Install</a>
+          </ul><a href="https://docs.dgraph.io/get-started/" target="_blank" class="page-header__cta btn btn-main btn-cta">Install</a>
         </div>
       </div>
     </div>
@@ -103,10 +103,10 @@
   </section>
   <!-- / page-intro-->
   <div class="page-content page-content--homepage">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="dg-features">
+    <div class="dg-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
             <ul class="dg-features__list">
               <li class="dg-features__item">
                 <div class="dg-features__figure"><img src="assets/images/homepage/feature-01.svg" alt="Image for low latency, high throughput feature" class="dg-features__image"></div>
@@ -131,235 +131,29 @@
               </li>
             </ul>
             <!-- /.demo-features-->
-            
           </div>
         </div>
       </div>
     </div>
-    <div class="demo__wrapper">
-      <div class="demo">
-        <div class="container">
-          <div class="row">
-            <div class="col-12">
-              <header class="section-header">
-                <h2 class="section-header__title">Distributed joins are a cakewalk</h2>
-                <p class="section-header__lead">Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.</p>
-              </header>
-              <div class="demo-console">
-                <header class="demo-console__header">
-                  <h5 class="demo-console__title">Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.</h5>
-                </header><!-- Start Demo section -->
-<div class="codepen from-bottom ng-cloak" ng-app="darthGraph" ng-controller="GraphMagic">
-    <div class="codepen__header">
-    </div>
-    <div class="codepen__body">
-        <ul class=querytabs>
-            <li ng-repeat='tab in examples' ng-click='activate($index)' class="{{tab.active ? 'active' : ''}}">
-                <button ng-click='activate($index)'>{{ tab.title}}</button>
-            </li>
-            <span class="powered-badge">Powered by Dgraph</span>
-        </ul>
-        <div class=query>
-            <div ui-ace="{
-                 useWrapMode : true,
-                 showGutter: false,
-                 theme:'tomorrow_night_eighties',
-                 mode: 'javascript',
-                 onLoad: queryEditorLoaded,
-                 require: ['ace/ext/language_tools'],
-                 advanced: {
-                     enableSnippets: false,
-                     enableBasicAutocompletion: true,
-                     enableLiveAutocompletion: true
-                 },
-               }" ng-model="active_tab.code" class=editor></div>
-            <div class=float>
-                <!-- <button class="positive">Run Query</button> -->
-                <button ng-click="reset_example_code()" class="danger" ng-class="{hidden: active_tab.code == active_tab.sample_code}">Undo Changes</button>
-            </div>
-        </div>
-        <div class=result>
-            <span class='spinner' ng-show="isNetPending()">
-              <i class="fa fa-spinner icon-myspin"></i>
-              Processing...
-          </span>
-            <table class="latencycontainer" ng-hide="isNetPending()">
-                <tr class="entities">
-                    <td>Entities found</td>
-                    <td>:</td>
-                    <td>{{latency_data.entity_count}}</td>
-                </tr>
-                <tr class="total">
-                    <td>Server latency</td>
-                    <td>:</td>
-                    <td>{{ latency_data.total }}</td>
-                </tr>
-                <tr>
-                    <td class="processing">Processing</td>
-                    <td>:</td>
-                    <td>{{latency_data.processing}}</td>
-                </tr>
-                <tr>
-                    <td class="jsongen">JSON Conversion</td>
-                    <td>:</td>
-                    <td>{{latency_data.json}}</td>
-                </tr>
-            </table>
-            <div class="tabcontainer">
-                <h2 class="resulttab" ng-class="{active: result_json}" ng-click="result_json=true">
-                  json
-              </h2>
-                <h2 class="resulttab" ng-class="{active:!result_json}" ng-click="result_json=false">
-                  tree
-              </h2>
-            </div>
-            <div ui-ace="{
-                  useWrapMode : true,
-                  showGutter: false,
-                  readOnly: true,
-                  theme:'tomorrow_night_eighties',
-                  mode: 'javascript',
-                  onLoad: responseEditorLoaded,
-               }" readonly ng-model="json_result" ng-show="result_json" class=editor></div>
-            <div class="tree" ng-if="!result_json">
-                <tree obj="tree_result" expanded="true"></tree>
-                <div ng-if="!tree_result">query result is not available</div>
-            </div>
-            <div ng-if="had_network_error" style="color:#f2777a">Error talking to server</div>
-        </div>
-    </div>
-    <script type="text/ng-template" id="tree_node.html">
-        <div ng-if="obj" class="treenode">
-            <div class="title" ng-click="expanded=!expanded">
-                {{summary.title}}
-            </div>
-            <div ng-if="expanded" ng-repeat="field in fields" class="field">
-                <div class="atomvalue"> {{field.value}}</div>
-                <div class="objvalue">
-                    <tree ng-if="field.subobj" obj="field.subobj" expanded="false"></tree>
-                    <div ng-if="field.array">
-                        <div class="arraysummary" ng-if="!field.expanded" ng-click="field.expanded=true">
-                            <i class="fa fa-plus-circle"></i> {{field.array.length}} item{{field.array.length!=1?'s':''}}
-                        </div>
-                        <div ng-if="field.expanded">
-                            <div class="arrayoutline" ng-click="field.expanded=false">
-                                <i class="fa fa-minus-circle"></i> {{field.array.length}} item{{field.array.length!=1?'s':''}}
-                            </div>
-                            <table>
-                                <tr ng-repeat="el in field.array track by el._uid_">
-                                    <td>{{$index}}&nbsp;</td>
-                                    <td>
-                                        <tree ng-class-odd='"odd"' obj="el" expanded="false"></tree>
-                                    </td>
-                                </tr>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </script>
-</div>
-<!-- /codepen -->
-<!-- End Demo section -->
-
-              </div>
-              <!-- /.demo-console-->
-            </div>
-          </div>
-        </div>
-      </div>
-      <!-- /.demo-->
-    </div>
-    <!-- /.demo__wrapper-->
-    <div class="usage">
+    <div class="dg-testimonials">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <header class="section-header">
-              <h2 class="section-header__title">Use Cases</h2>
-            </header>
-            <div class="usage-carousel">
-              <nav class="usage-carousel__nav">
-                <div class="usage-carousel__window"></div>
-                <div class="usage-carousel__controls"><a href="javascript:;" id="previous-slide" class="usage-carousel__control-up">
-                    <svg class="icon">
-                      <use xlink:href="#icon-chevron-up" xmlns:xlink="http://www.w3.org/1999/	xlink"></use>
-                    </svg></a><a href="javascript:;" id="next-slide" class="usage-carousel__control-down js-usage-carousel-down">
-                    <svg class="icon">
-                      <use xlink:href="#icon-chevron-down" xmlns:xlink="http://www.w3.org/1999/	xlink"></use>
-                    </svg></a></div>
-                <ul class="usage-carousel__list">
-                  <li class="usage-carousel__item">Movie Directory</li>
-                  <li class="usage-carousel__item">Recommendation Engine</li>
-                  <li class="usage-carousel__item is-active">Social Network</li>
-                </ul>
-              </nav>
-            </div>
-            <div class="result__list">
-              <div class="result__item"><img src="assets/images/homepage/slide-01.png" alt="Use case scenario for movies."></div>
-              <div class="result__item"><img src="assets/images/homepage/slide-02.png" alt="Use case scenario for recommendation engine."></div>
-              <div class="result__item is-active"><img src="assets/images/homepage/slide-03.png" alt="Use case scenario for book club."></div>
+            <h2 class="section-header dg-testimonials__header">What Users Are Saying</h2>
+            <div id="dg-testimonials__carousel" data-ride="carousel" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="carousel-item dg-testimonials__item active">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</div>
+              </div><a href="#dg-testimonials__carousel" role="button" data-slide="prev" class="carousel-control-prev"><span aria-hidden="true" class="carousel-control-prev-icon"></span><span class="sr-only">	Previous</span></a><a href="#dg-testimonials__carousel" role="button" data-slide="next" class="carousel-control-next"><span aria-hidden="true" class="carousel-control-next-icon"></span><span class="sr-only">Next</span></a>
+              <ol class="carousel-indicators">
+                <li data-target="#dg-testimonials__carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="1"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="2"></li>
+              </ol>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <!-- /.use-case-->
-    <div class="media">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <header class="section-header">
-              <h2 class="section-header__title">Dgraph in the News</h2>
-              <p class="section-header__lead"></p>
-            </header>
-            <!-- /.media-inline-->
-            <div class="media-logo">
-              <div class="media-logo__row">
-                <div class="media-logo__item"><a href="" class="hn"><img src="assets/images/in-news/hn.jpg" alt="Hacker News"></a></div>
-                <div class="media-logo__item"><a href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank"><img src="assets/images/in-news/fr.jpg" alt="Financial Review"></a></div>
-                <div class="media-logo__item"><a href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank"><img src="assets/images/in-news/ss.jpg" alt="Startup Smart"></a></div>
-              </div>
-            </div>
-            <div class="hn-list">
-              <ul class="media__list">
-                <li class="media__item"><a href="https://news.ycombinator.com/item?id=11322444" target="_blank" class="media__link">DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database</a></li>
-                <li class="media__item"><a href="https://news.ycombinator.com/item?id=11934087" target="_blank" class="media__link">Dgraph is a next generation graph database with GraphQL as the query language</a></li>
-                <li class="media__item"><a href="https://news.ycombinator.com/		item?id=11944969" target="_blank" class="media__link">Scaling nodes in a Dgraph cluster</a></li>
-              </ul>
-            </div>
-            <!-- /.media-logo-->
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.media-->
-    <div class="cta-wrapper cta-wrapper--homepage">
-      <div class="container">
-        <div class="row">
-          <div class="col-12">
-            <div class="cta">
-              <div class="cta__box">
-                <h4 class="cta__title">Download Dgraph</h4>
-                <p>Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.</p><a href="https://docs.dgraph.io" target="_blank" class="button button--white button--jumbo cta__button">Official Documentation</a>
-              </div>
-              <div class="cta__more">
-                <h4 class="cta__title">More information about Dgraph</h4>
-                <ul class="cta__more-list">
-                  <li class="cta__more-item"><a href="https://github.com/dgraph-io/dgraph/" target="_blank" class="cta__more-link cta__more-link--github">GitHub</a></li>
-                  <li class="cta__more-item"><a href="https://discuss.dgraph.io" target="_blank" class="cta__more-link cta__more-link--discourse">Discourse</a></li>
-                  <li class="cta__more-item"><a href="https://slack.dgraph.io/" target="_blank" class="cta__more-link cta__more-link--slack">Slack</a></li>
-                  <li class="cta__more-item"><a href="https://open.dgraph.io" target="_blank" class="cta__more-link cta__more-link--blog">Blog</a></li>
-                  <li class="cta__more-item"><a href="https://docs.dgraph.io" target="_blank" class="cta__more-link cta__more-link--wiki">Documentation</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.cta-->
   </div>
   <div class="page-footer__wrapper">
     <footer id="page-footer" class="page-footer">
@@ -411,8 +205,10 @@
   <!-- / page-footer__wrapper-->
 
   <!-- js-->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-  <script>window.jQuery || document.write('<script src="assets/js/jquery-2.1.0.min.js"><\/script>')</script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
 
   <script type="text/javascript">
     //- // Cashing SVG Sprite in localStorage 

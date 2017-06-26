@@ -1665,12 +1665,10 @@ hr {
   text-decoration: none;
 }
 .dg-features {
-  margin-top: 60px;
   margin-bottom: 60px;
 }
 @media screen and (min-width: 989px) {
   .dg-features {
-    margin-top: 80px;
     margin-bottom: 80px;
   }
 }
@@ -2073,6 +2071,28 @@ hr {
   z-index: 1;
   -webkit-transform: rotate(-78deg);
           transform: rotate(-78deg);
+}
+.dg-testimonials {
+  background-color: #ff7d60;
+  color: #fff;
+  padding: 95px 0 132px;
+}
+.dg-testimonials__item {
+  -webkit-box-pack: center;
+          justify-content: center;
+}
+.dg-testimonials__header {
+  margin-bottom: 49px;
+}
+.dg-testimonials .carousel-indicators {
+  bottom: -62px;
+}
+.dg-testimonials .carousel-inner {
+  width: 74%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 25px;
+  line-height: 30px;
 }
 /* ===========================================
    About page styling

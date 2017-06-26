@@ -124,10 +124,10 @@
 }
 
 .dg-features {
-    margin-top: @spacing-base;
+    // margin-top: @spacing-base;
     margin-bottom: @spacing-base;
     @media screen and (min-width: @desktop-breakpoint) {
-        margin-top: @spacing-medium;
+        // margin-top: @spacing-medium;
         margin-bottom: @spacing-medium;
     }
     &__list {
@@ -506,4 +506,30 @@
             transform: rotate(-78deg);
         }
     }
+}
+
+.dg-testimonials {
+  background-color: #ff7d60;
+  color: #fff;
+  padding: 95px 0 132px;
+
+  &__item {
+    justify-content: center;
+  }
+
+  &__header {
+    margin-bottom: 49px;
+  }
+
+  .carousel-indicators {
+    bottom: -62px;
+  }
+
+  .carousel-inner {
+    width: 74%;
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 25px;
+    line-height: 30px;
+  }
 }
