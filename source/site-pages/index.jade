@@ -41,8 +41,8 @@ block page-intro
 							|  is an open source, distributed, and highly available graph database, built to scale horizontally.
 					
 					.page-intro__actions
-						a.btn.btn-main.page-intro__cta.page-intro__cta-install(href="https://docs.dgraph.io/get-started/") Try it
-						a.btn.btn-transparent.page-intro__cta.page-intro__cta-learn(href="https://tour.dgraph.io/") Take a tour
+						a.btn.btn-main.page-intro__cta.page-intro__cta-install(href="https://docs.dgraph.io/get-started/" target="_blank") Try it
+						a.btn.btn-transparent.page-intro__cta.page-intro__cta-learn(href="https://tour.dgraph.io/" target="_blank") Take a tour
 
 block page-content
 
@@ -120,16 +120,43 @@ block page-content
 							.carousel-item.dg-testimonials__item
 								| Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 						a.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
-							span.carousel-control-prev-icon(aria-hidden='true')
+							i.fa.fa-arrow-left
 							span.sr-only	Previous
 						a.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
-							span.carousel-control-next-icon(aria-hidden='true')
+							i.fa.fa-arrow-right
 							span.sr-only Next
 							
 						ol.carousel-indicators
 							li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
+							
+	.cta-wrapper.cta-wrapper--homepage
+		.container
+			.row
+				.col-12
+					.cta
+						.cta__box
+							h4.cta__title Download Dgraph
+							p Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.
+
+							a(href="https://docs.dgraph.io" target="_blank").button.button--white.button--jumbo.cta__button Official Documentation
+
+						.cta__more
+							h4.cta__title More information about Dgraph
+							ul.cta__more-list
+								li.cta__more-item
+									a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github GitHub
+								li.cta__more-item
+									a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse Discourse
+								li.cta__more-item
+									a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack Slack
+								li.cta__more-item
+									a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog Blog
+								li.cta__more-item
+									a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki Documentation
+
+						// /.cta
 
 	//- .media
 	//- 	.container

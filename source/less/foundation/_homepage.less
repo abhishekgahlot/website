@@ -525,6 +525,14 @@
 
   .carousel-indicators {
     bottom: -62px;
+
+    li:after {
+      background: #cccccc;
+    }
+
+    li.active:after {
+      background: black;
+    }
   }
 
   .carousel-inner {
@@ -533,6 +541,10 @@
     margin-right: auto;
     font-size: 25px;
     line-height: 30px;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    color: black;
   }
 }
 
