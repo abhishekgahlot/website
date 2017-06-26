@@ -35,7 +35,7 @@ block page-intro
 				
 				.page-intro__header-content
 					header.page-intro__header
-						h1.page-intro__title.page-intro__title--emphasized Fastest graph database
+						h1.page-intro__title.page-intro__title--emphasized Graph Database Built Right
 						p.page-intro__lead
 							span.page-intro__brand Dgraph
 							|  is an open source, distributed, and highly available graph database, built to scale horizontally.
@@ -71,11 +71,45 @@ block page-content
 								p Written entirely in Go, Dgraph is available under open-source license.
 					// /.demo-features
 
-	.dg-testimonials
+	.dg-introduction.bg-dim
 		.container
 			.row
 				.col-12
-					h2.section-header.dg-testimonials__header What Users Are Saying
+					h2.section-header
+						| Why Dgraph?
+						p.section-header__lead
+							| Dgraph is a graph database built to scale horizontally. Its sharded storage and query processing were specifically designed to minimize the number of network calls.
+						
+						a.btn.btn-primary(href="https://docs.dgraph.io/faq/" target="_blank")
+							| Learn More 
+							i.fa.fa-arrow-right
+
+
+	.demo__wrapper
+		.demo
+			.container
+				.row
+					.col-12
+						header.section-header
+							h2.section-header__title See for Yourself
+							p.section-header__lead Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.
+
+						.demo-console
+							header.demo-console__header
+								h5.demo-console__title Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.
+
+							include partials/demo-section/demo.html
+
+						// /.demo-console
+		// /.demo
+	// /.demo__wrapper
+	
+	
+	.dg-testimonials.bg-dim
+		.container
+			.row
+				.col-12
+					h2.section-header.dg-testimonials__header What Users Say
 					
 					#dg-testimonials__carousel.carousel.slide(data-ride='carousel')
 						.carousel-inner(role='listbox')
@@ -97,51 +131,29 @@ block page-content
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
 
-
-	.demo__wrapper
-		.demo
-			.container
-				.row
-					.col-12
-						header.section-header
-							h2.section-header__title See for Yourself
-							p.section-header__lead Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.
-
-						.demo-console
-							header.demo-console__header
-								h5.demo-console__title Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.
-
-							include partials/demo-section/demo.html
-
-						// /.demo-console
-		// /.demo
-	// /.demo__wrapper
-
-
-	.media
-		.container
-			.row
-				.col-12
-					// /.media-inline
-					.media-logo
-						.media-logo__row
-							.media-logo__item
-								a.hn(href="")
-									img(src="assets/images/in-news/hn.jpg", alt="Hacker News")
-							.media-logo__item
-								a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")
-									img(src="assets/images/in-news/fr.jpg", alt="Financial Review")
-							.media-logo__item
-								a(href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank")
-									img(src="assets/images/in-news/ss.jpg", alt="Startup Smart")
-					div.hn-list
-						ul.media__list
-							li.media__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").media__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
-							li.media__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").media__link Dgraph is a next generation graph database with GraphQL as the query language
-							li.media__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").media__link Scaling nodes in a Dgraph cluster
-					// /.media-logo
-
-	// /.media
+	//- .media
+	//- 	.container
+	//- 		.row
+	//- 			.col-12
+	//- 				// /.media-inline
+	//- 				.media-logo
+	//- 					.media-logo__row
+	//- 						.media-logo__item
+	//- 							a.hn(href="")
+	//- 								img(src="assets/images/in-news/hn.jpg", alt="Hacker News")
+	//- 						.media-logo__item
+	//- 							a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")
+	//- 								img(src="assets/images/in-news/fr.jpg", alt="Financial Review")
+	//- 						.media-logo__item
+	//- 							a(href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank")
+	//- 								img(src="assets/images/in-news/ss.jpg", alt="Startup Smart")
+	//- 				div.hn-list
+	//- 					ul.media__list
+	//- 						li.media__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").media__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
+	//- 						li.media__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").media__link Dgraph is a next generation graph database with GraphQL as the query language
+	//- 						li.media__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").media__link Scaling nodes in a Dgraph cluster
+	//- 				// /.media-logo
+	//- // /.media
 
 block additional-scripts
 	// JavaScript files for Demo section

@@ -2076,8 +2076,6 @@ hr {
           transform: rotate(-78deg);
 }
 .dg-testimonials {
-  background-color: #ff7d60;
-  color: #fff;
   padding: 95px 0 132px;
 }
 .dg-testimonials__item {
@@ -2096,6 +2094,10 @@ hr {
   margin-right: auto;
   font-size: 25px;
   line-height: 30px;
+}
+.dg-introduction {
+  padding: 129px 0;
+  text-align: center;
 }
 /* ===========================================
    About page styling
@@ -3833,7 +3835,7 @@ img[data-src] {
   border-bottom: 1px solid gray;
 }
 .page-header__header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   right: 0;
@@ -3898,6 +3900,7 @@ img[data-src] {
   position: relative;
   z-index: 5;
   margin-top: 80px;
+  text-align: center;
 }
 @media screen and (min-width: 989px) {
   .page-footer {
@@ -4123,6 +4126,9 @@ img[data-src] {
 }
 .page-intro--blog-article {
   margin-bottom: 60px;
+}
+.bg-dim {
+  background-color: #fafbfd;
 }
 /* ===========================================
    Page content styling
