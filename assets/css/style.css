@@ -1561,6 +1561,9 @@ hr {
     padding-top: 25px;
   }
 }
+.demo__wrapper {
+  padding: 90px 0;
+}
 .demo-console__header {
   color: #ffffff;
   background-color: #f96315;
