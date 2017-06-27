@@ -4,13 +4,27 @@
 
 .page-intro {
 	// margin-top: 30px;
-  margin-top: 178px;
-	margin-bottom: @spacing-base;
-	@media screen and (min-width: @desktop-breakpoint) {
-		// margin-top: @spacing-large;
-		margin-top: 178px;
-		margin-bottom: @spacing-large;
-	}
+  // margin-top: 178px;
+	// margin-bottom: @spacing-base;
+	// @media screen and (min-width: @desktop-breakpoint) {
+	// 	// margin-top: @spacing-large;
+	// 	margin-top: 178px;
+	// 	margin-bottom: @spacing-large;
+	// }
+
+  // &:after {
+  //   background: inherit;
+  //   bottom: 0;
+  //   content: '';
+  //   display: block;
+  //   height: 50%;
+  //   left: 0;
+  //   position: absolute;
+  //   right: 0;
+  //   transform: skewY(-1.5deg);
+  //   transform-origin: 100%;
+  //   z-index: -1;
+  // }
 
 	&__header {
 		text-align: center;
@@ -114,6 +128,13 @@
 
 .page-intro {
 
+  &__main {
+    background: linear-gradient(to bottom right, #ff6928, #ff0000);
+    @media screen and (min-width: @desktop-breakpoint) {
+      min-height: 700px;
+    }
+  }
+
 	&--homepage {
 		position: relative;
 		z-index: 5;
@@ -121,7 +142,7 @@
 		margin-bottom: 0;
 		// background-image: url('../images/homepage/bg.svg');
 		@media screen and (min-width: @desktop-breakpoint) {
-	    min-height: 308px;
+	    min-height: 700px;
 		}
 
 		.page-intro__lead {

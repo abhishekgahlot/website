@@ -552,3 +552,37 @@
   padding: 129px 0;
   text-align: center;
 }
+
+.vertical-overlap {
+  height: 500px;
+}
+
+// .dg-hero-container {
+//   background-color: #ff0000;
+// }
+
+.page-content {
+  &__features {
+    height: 100px;
+    position: relative;
+
+    &:before {
+      position: absolute;
+      content: '';
+      pointer-events: none;
+      top: -63px;
+      left: -25%;
+      z-index: -1;
+      width: 150%;
+      height: 75%;
+      background: inherit;
+      transform: rotate(-2deg);
+      transform-origin: 0 0;
+      height: 53%;
+      background: #ffffff;
+      transform: rotate(2deg);
+      transform-origin: 3% 0;
+      z-index: 5;
+    }
+  }
+}
