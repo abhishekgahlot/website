@@ -4158,6 +4158,7 @@ img[data-src] {
 }
 @media screen and (min-width: 767px) {
   .page-intro__logo {
+    display: inherit;
     width: 166px;
   }
 }
@@ -4167,7 +4168,7 @@ img[data-src] {
   }
 }
 .page-intro__desc {
-  margin-top: 29px;
+  margin-top: 22px;
   color: white;
   font-size: 16px;
   font-weight: 600;
@@ -4279,7 +4280,7 @@ img[data-src] {
 }
 .page-intro--homepage__title {
   text-transform: uppercase;
-  font-size: 1.2em;
+  font-size: 1.1em;
   font-weight: 800;
   margin-top: 20px;
   line-height: 1.2em;
