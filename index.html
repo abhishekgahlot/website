@@ -34,7 +34,7 @@
   <meta name="msapplication-config" content="/assets/favicons/browserconfig.xml">
   <meta name="theme-color" content="#ffffff">
 
-  <title>Dgraph: Fastest graph database in the market</title>
+  <title>Dgraph — Fastest Graph Database in the Market</title>
 
   <!-- fonts-->
   <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,800,700,500" rel="stylesheet" type="text/css">
@@ -70,12 +70,12 @@
     <div class="container">
       <div class="page-header__content"><a href="/"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo"></a>
         <div class="page-header__actions">
-          <ul class="page-header__menu-list">
+          <ul class="page-header__menu-list hidden-xs-down">
             <li class="page-header__menu-item"><a href="https://docs.dgraph.io" target="_blank"> <span class="label">Docs</span></a></li>
             <li class="page-header__menu-item"><a href="https://open.dgraph.io" target="_blank"><span class="label">Blog</span></a></li>
             <li class="page-header__menu-item"><a href="https://discuss.dgraph.io" target="_blank"><span class="label">Forum</span></a></li>
             <li class="page-header__menu-item"><a href="https://slack.dgraph.io" target="_blank"><span class="label">Slack</span></a></li>
-          </ul><a href="https://docs.dgraph.io/get-started/" target="_blank" class="page-header__cta btn btn-main btn-cta">Install</a>
+          </ul><a href="https://docs.dgraph.io/get-started/" target="_blank" class="page-header__cta btn btn-main btn-cta hidden-xs-down">Install</a><a href="https://docs.dgraph.io/" target="_blank" class="page-header__cta btn btn-main btn-cta hidden-sm-up">Docs</a>
         </div>
       </div>
     </div>
@@ -84,7 +84,7 @@
   <section class="page-intro page-intro--homepage">
     <div class="page-intro__main">
       <div class="container">
-        <div class="row">
+        <div class="row hidden-xs-down">
           <div class="col-12">
             <div class="page-intro__nav-container">
               <ul class="page-intro__nav-list">
@@ -98,13 +98,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-5 offset-1">
+          <div class="col-sm-6 col-md-5 offset-md-1 hidden-xs-down">
             <div class="page-intro__intro-section"><img src="assets/images/homepage/diggy-shadow.png" class="diggy"></div>
           </div>
-          <div class="col-5">
+          <div class="col-12 col-sm-6 col-md-5">
             <div class="page-intro__intro-section"><img src="assets/images/logo-glow.png" class="page-intro__logo">
               <h1 class="page-intro--homepage__title">Scalable, distributed, low latency, high throughput graph database</h1>
-              <p class="page-intro__desc">Building a social network or a recommendation engine, Dgraph will suit your needs.</p>
+              <p class="page-intro__desc">Building a social network or a recommendation engine, Dgraph will suit your needs.</p><a href="https://docs.dgraph.io/get-started/" target="_blank" class="btn btn-primary hidden-sm-up"><span class="label">Try It</span></a>
             </div>
           </div>
         </div>
@@ -148,10 +148,12 @@
       <div class="divider"></div>
       <div class="container">
         <div class="row">
-          <div class="col-6">
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/cHXbYLNa0qQ" frameborder="0" allowfullscreen=""></iframe>
+          <div class="col-12 col-sm-12 col-md-6">
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe src="https://www.youtube.com/embed/cHXbYLNa0qQ" allowfullscreen=""></iframe>
+            </div>
           </div>
-          <div class="col-6">
+          <div class="col-12 col-sm-12 col-md-6">
             <div class="dg-introduction-desc">
               <h3 class="heading">Distributed by design.</h3>
               <p class="desc">Dgraph can easily scale to multiple machines, or datacenters. Its sharded storage and query processing were specifically designed to minimize the number of network calls.</p><a href="https://docs.dgraph.io/faq/" target="_blank" class="btn btn-primary">Learn More <i class="fa fa-arrow-right"></i></a>
@@ -317,6 +319,7 @@
         </div>
       </div>
     </div>
+    <!-- TODO: The final section should be license details, enterprise version-->
     <div class="cta-wrapper cta-wrapper--homepage">
       <div class="container">
         <div class="row">
@@ -326,7 +329,7 @@
                 <h4 class="cta__title">Download Dgraph</h4>
                 <p>Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.</p><a href="https://docs.dgraph.io" target="_blank" class="button button--white button--jumbo cta__button">Official Documentation</a>
               </div>
-              <div class="cta__more">
+              <div class="cta__more hidden-xs-down">
                 <h4 class="cta__title">More information about Dgraph</h4>
                 <ul class="cta__more-list">
                   <li class="cta__more-item"><a href="https://github.com/dgraph-io/dgraph/" target="_blank" class="cta__more-link cta__more-link--github">GitHub</a></li>

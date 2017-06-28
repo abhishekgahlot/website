@@ -2,7 +2,7 @@ extends pagewrapper
 
 //- Override config.jade file
 append page-config
-	- var PageTitle = 'Dgraph: Fastest graph database in the market'
+	- var PageTitle = 'Dgraph — Fastest Graph Database in the Market'
 	- var PageClass = 'homepage'
 	- var PageIntroClass = 'homepage'
 	- var PageContentClass = 'homepage'
@@ -27,7 +27,7 @@ block partials
 block page-intro
 	.page-intro__main
 		.container
-			.row
+			.row.hidden-xs-down
 				.col-12
 					.page-intro__nav-container
 						ul.page-intro__nav-list
@@ -47,10 +47,10 @@ block page-intro
 								a(href="https://docs.dgraph.io/get-started/" target="_blank")
 									span.label Install
 			.row
-				.col-5.offset-1
+				.col-sm-6.col-md-5.offset-md-1.hidden-xs-down
 					.page-intro__intro-section
 						img.diggy(src="assets/images/homepage/diggy-shadow.png")
-				.col-5
+				.col-12.col-sm-6.col-md-5
 					.page-intro__intro-section
 						img.page-intro__logo(src="assets/images/logo-glow.png")
 						
@@ -59,6 +59,9 @@ block page-intro
 							
 						p.page-intro__desc
 							| Building a social network or a recommendation engine, Dgraph will suit your needs.
+							
+						a.btn.btn-primary.hidden-sm-up(href="https://docs.dgraph.io/get-started/" target="_blank")
+							span.label Try It
 
 block page-content
 
@@ -95,9 +98,10 @@ block page-content
 
 		.container
 			.row
-				.col-6
-					iframe(width='560', height='315', src='https://www.youtube.com/embed/cHXbYLNa0qQ', frameborder='0', allowfullscreen='')
-				.col-6
+				.col-12.col-sm-12.col-md-6
+					.embed-responsive.embed-responsive-16by9
+						iframe(src='https://www.youtube.com/embed/cHXbYLNa0qQ', allowfullscreen='')
+				.col-12.col-sm-12.col-md-6
 					.dg-introduction-desc
 						h3.heading
 							| Distributed by design.
@@ -155,6 +159,7 @@ block page-content
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
 							
+	// TODO: The final section should be license details, enterprise version
 	.cta-wrapper.cta-wrapper--homepage
 		.container
 			.row
@@ -166,7 +171,7 @@ block page-content
 	
 							a(href="https://docs.dgraph.io" target="_blank").button.button--white.button--jumbo.cta__button Official Documentation
 	
-						.cta__more
+						.cta__more.hidden-xs-down
 							h4.cta__title More information about Dgraph
 							ul.cta__more-list
 								li.cta__more-item

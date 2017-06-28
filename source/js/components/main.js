@@ -237,7 +237,30 @@ $(document).ready(function() {
   //
   // Scrollspy for header navigation
 
+  var mobileWidthBreakpoint = 425;
+
+  function shouldDisplayHeader() {
+    var w = Math.max(
+      document.documentElement.clientWidth,
+      window.innerWidth || 0
+    );
+
+    return w <= mobileWidthBreakpoint;
+  }
+
+  function setHeaderVisibility() {
+    if (shouldDisplayHeader()) {
+      $(".page-header__header").addClass("visible");
+    } else {
+      $(".page-header__header").removeClass("visible");
+    }
+  }
+
   function maybeToggleHeaderVisibility() {
+    if (shouldDisplayHeader()) {
+      return;
+    }
+
     var currentScrollY = document.body.scrollTop;
 
     if (currentScrollY > 418) {
@@ -252,7 +275,11 @@ $(document).ready(function() {
       "scroll",
       debounce(maybeToggleHeaderVisibility, 20)
     );
+
+    window.addEventListener("resize", setHeaderVisibility);
   } else {
     $(".page-header__header").addClass("visible");
   }
+
+  setHeaderVisibility();
 }); // end document ready
