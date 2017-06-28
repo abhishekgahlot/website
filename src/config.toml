@@ -1,5 +1,0 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-theme = "website"
-
-title = "Dgraph"
