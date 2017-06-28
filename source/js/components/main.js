@@ -1,3 +1,22 @@
+// debounce limits the amount of function invocation by spacing out the calls
+// by at least `wait` ms.
+function debounce(func, wait, immediate) {
+  var timeout;
+
+  return function() {
+    var context = this, args = arguments;
+    var later = function() {
+      timeout = null;
+      if (!immediate) func.apply(context, args);
+    };
+
+    var callNow = immediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if (callNow) func.apply(context, args);
+  };
+}
+
 $(document).ready(function() {
   // ===========================================================================
   //
@@ -213,4 +232,27 @@ $(document).ready(function() {
     }
     e.preventDefault();
   });
+
+  // ===========================================================================
+  //
+  // Scrollspy for header navigation
+
+  function maybeToggleHeaderVisibility() {
+    var currentScrollY = document.body.scrollTop;
+
+    if (currentScrollY > 418) {
+      $(".page-header__header").addClass("visible");
+    } else {
+      $(".page-header__header").removeClass("visible");
+    }
+  }
+
+  if (window.location.pathname === "/") {
+    window.addEventListener(
+      "scroll",
+      debounce(maybeToggleHeaderVisibility, 20)
+    );
+  } else {
+    $(".page-header__header").addClass("visible");
+  }
 }); // end document ready

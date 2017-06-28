@@ -4049,6 +4049,16 @@ img[data-src] {
 /* ===========================================
    Page intro styling
    =========================================== */
+.page-intro:not(.page-intro--homepage) {
+  margin-top: 178px;
+  margin-bottom: 60px;
+}
+@media screen and (min-width: 989px) {
+  .page-intro:not(.page-intro--homepage) {
+    margin-top: 178px;
+    margin-bottom: 100px;
+  }
+}
 .page-intro__header {
   text-align: center;
 }
@@ -4112,7 +4122,6 @@ img[data-src] {
 .page-intro__title {
   text-transform: uppercase;
   font-size: 1.9em;
-  color: white;
   font-weight: 800;
   margin-top: 20px;
   line-height: 1.2em;
@@ -4165,7 +4174,7 @@ img[data-src] {
   font-size: 1.5rem;
   font-weight: 500;
   text-align: center;
-  color: #353535;
+  color: #a4958c;
   margin-top: 30px;
 }
 .page-intro__actions {
@@ -4210,13 +4219,13 @@ img[data-src] {
   min-height: 450px;
   margin-bottom: 0;
 }
-.page-intro--homepage .page-intro__lead {
-  display: inline-block;
-}
-@media screen and (min-width: 1169px) {
-  .page-intro--homepage .page-intro__lead {
-    width: 70%;
-  }
+.page-intro--homepage__title {
+  text-transform: uppercase;
+  font-size: 1.9em;
+  font-weight: 800;
+  margin-top: 20px;
+  line-height: 1.2em;
+  color: white;
 }
 .page-intro--blog-article {
   margin-bottom: 60px;
