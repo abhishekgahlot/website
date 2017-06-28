@@ -37,15 +37,77 @@
     margin-right: auto;
 	}
 
-	&__title {
-		.font-size(34);
+	&__nav-container {
 		text-align: center;
-		@media screen and (min-width: @tablet-breakpoint) {
-			.font-size(38);
+		padding-top: 38px;
+	}
+
+	&__nav-list {
+		list-style: none;
+		padding-left: 0;
+		margin-bottom: 0;
+    height: 100%;
+    display: inline-block;
+	}
+
+	&__nav-item {
+		display: inline-block;
+    margin-bottom: 0;
+    height: 100%;
+
+		a {
+			height: 100%;
+	    display: inline-flex;
+	    align-items: center;
+	    padding: 0 13.5px;
+			color: white;
+			text-transform: uppercase;
+			font-size: 14px;
+			font-weight: 600;
 		}
-		@media screen and (min-width: @desktop-breakpoint) {
-			.font-size(48);
+
+		a:hover {
+			color: white;
 		}
+	}
+
+	&__intro-section {
+		padding-top: 70px;
+
+		.diggy {
+		  width: 324px;
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__logo {
+		width: 266px;
+    margin-top: 28px;
+	}
+
+	&__desc {
+		margin-top: 29px;
+		color: white;
+		font-size: 16px;
+		font-weight: 600;
+	}
+
+	&__title {
+		text-transform: uppercase;
+		font-size: 1.9em;
+		color: white;
+		font-weight: 800;
+		margin-top: 20px;
+		line-height: 1.2em;
+
+		// @media screen and (min-width: @tablet-breakpoint) {
+		// 	.font-size(38);
+		// }
+		// @media screen and (min-width: @desktop-breakpoint) {
+		// 	.font-size(48);
+		// }
 
 		// Used on homepage
 		&--emphasized {

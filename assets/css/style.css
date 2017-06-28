@@ -3882,6 +3882,10 @@ img[data-src] {
   z-index: 99;
   opacity: 0.8;
   border-bottom: 1px solid #fbfbfb;
+  display: none;
+}
+.page-header__header.visible {
+  display: block;
 }
 .page-header__logo {
   width: 115px;
@@ -4044,22 +4048,63 @@ img[data-src] {
   margin-left: auto;
   margin-right: auto;
 }
-.page-intro__title {
-  font-size: 34px;
-  font-size: 2.125rem;
+.page-intro__nav-container {
   text-align: center;
+  padding-top: 38px;
 }
-@media screen and (min-width: 767px) {
-  .page-intro__title {
-    font-size: 38px;
-    font-size: 2.375rem;
-  }
+.page-intro__nav-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
+  height: 100%;
+  display: inline-block;
 }
-@media screen and (min-width: 989px) {
-  .page-intro__title {
-    font-size: 48px;
-    font-size: 3rem;
-  }
+.page-intro__nav-item {
+  display: inline-block;
+  margin-bottom: 0;
+  height: 100%;
+}
+.page-intro__nav-item a {
+  height: 100%;
+  display: -webkit-inline-box;
+  display: inline-flex;
+  -webkit-box-align: center;
+          align-items: center;
+  padding: 0 13.5px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 600;
+}
+.page-intro__nav-item a:hover {
+  color: white;
+}
+.page-intro__intro-section {
+  padding-top: 70px;
+}
+.page-intro__intro-section .diggy {
+  width: 324px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.page-intro__logo {
+  width: 266px;
+  margin-top: 28px;
+}
+.page-intro__desc {
+  margin-top: 29px;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+}
+.page-intro__title {
+  text-transform: uppercase;
+  font-size: 1.9em;
+  color: white;
+  font-weight: 800;
+  margin-top: 20px;
+  line-height: 1.2em;
 }
 .page-intro__title--emphasized {
   font-size: 28px;

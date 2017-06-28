@@ -25,27 +25,40 @@ block partials
 	//- include partials/overlays/overlay
 
 block page-intro
-	//- .container
-	//- 	.row
-	//- 		.col-12
-	//- 			.bolt-image__wrapper
-	//- 				.bolt-image.bolt-image--bottom-front
-	//- 				.bolt-image.bolt-image--bottom-back
-	//- 			// /.bolt-image__wrapper--bottom
-	//- 			
-	//- 			.page-intro__header-content
-	//- 				header.page-intro__header
-	//- 					h1.page-intro__title.page-intro__title--emphasized Graph Database Built Right
-	//- 					p.page-intro__lead
-	//- 						span.page-intro__brand Dgraph
-	//- 						|  is an open source, distributed, and highly available graph database, built to scale horizontally.
-	//- 				
-	//- 				.page-intro__actions
-	//- 					a.btn.btn-main.page-intro__cta.page-intro__cta-install(href="https://docs.dgraph.io/get-started/" target="_blank") Try it
-	//- 					a.btn.btn-transparent.page-intro__cta.page-intro__cta-learn(href="https://tour.dgraph.io/" target="_blank") Take a tour
-
 	.page-intro__main
-		| main page
+		.container
+			.row
+				.col-12
+					.page-intro__nav-container
+						ul.page-intro__nav-list
+							li.page-intro__nav-item
+								a(href="https://docs.dgraph.io" target="_blank") 
+									span.label Docs
+							li.page-intro__nav-item
+								a(href="https://open.dgraph.io" target="_blank")
+									span.label Blog
+							li.page-intro__nav-item
+								a(href="https://discuss.dgraph.io" target="_blank")
+									span.label Forum
+							li.page-intro__nav-item
+								a(href="https://slack.dgraph.io" target="_blank")
+									span.label Slack
+							li.page-intro__nav-item
+								a(href="https://docs.dgraph.io/get-started/" target="_blank")
+									span.label Install
+			.row
+				.col-5.offset-1
+					.page-intro__intro-section
+						img.diggy(src="assets/images/homepage/diggy-shadow.png")
+				.col-5
+					.page-intro__intro-section
+						img.page-intro__logo(src="assets/images/logo-glow.png")
+						
+						h1.page-intro__title
+							| Scalable, distributed, low latency, high throughput graph database
+							
+						p.page-intro__desc
+							| Building a social network or a recommendation engine, Dgraph will suit your needs.
 
 block page-content
 
