@@ -113,8 +113,234 @@
   </section>
   <!-- / page-intro-->
   <div class="page-content page-content--homepage">
-    <div class="page-content__features">
-      <div class="container">features</div>
+    <div class="page-content__features-container">
+      <div class="container page-content__features-content">
+        <ul class="dg-features__list">
+          <li class="dg-features__item">
+            <div class="dg-features__figure"><img src="assets/images/homepage/feature-01.svg" alt="Image for low latency, high throughput feature" class="dg-features__image"></div>
+            <div class="dg-features__description">
+              <h4 class="dg-features__title">Low Latency, High Throughput</h4>
+              <p>Low enough latency to serve real time queries over terabytes of structured data.</p>
+            </div>
+          </li>
+          <li class="dg-features__item">
+            <div class="dg-features__figure"><img src="assets/images/homepage/feature-02.svg" alt="Image for distributed and scalable feature" class="dg-features__image"></div>
+            <div class="dg-features__description">
+              <h4 class="dg-features__title">Distributed and Scalable</h4>
+              <p>Easily scale to multiple machines thanks to the sharded storage and minimal network calls.</p>
+            </div>
+          </li>
+          <li class="dg-features__item">
+            <div class="dg-features__figure"><img src="assets/images/homepage/feature-03.svg" alt="Image for open source feature" class="dg-features__image"></div>
+            <div class="dg-features__description">
+              <h4 class="dg-features__title">Open Source</h4>
+              <p>Written entirely in Go, Dgraph is available under open-source license.</p>
+            </div>
+          </li>
+        </ul>
+        <!-- /.demo-features-->
+        
+        
+      </div>
+    </div>
+    <div class="dg-introduction">
+      <h2>Built to scale horizontally for your big ideas</h2>
+      <div class="divider"></div>
+      <div class="container">
+        <div class="row">
+          <div class="col-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/cHXbYLNa0qQ" frameborder="0" allowfullscreen=""></iframe>
+          </div>
+          <div class="col-6">
+            <div class="dg-introduction-desc">
+              <h3 class="heading">Distributed by design.</h3>
+              <p class="desc">Dgraph can easily scale to multiple machines, or datacenters. Its sharded storage and query processing were specifically designed to minimize the number of network calls.</p><a href="https://docs.dgraph.io/faq/" target="_blank" class="btn btn-primary">Learn More <i class="fa fa-arrow-right"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="demo__wrapper hidden-xs-down">
+      <div class="demo">
+        <div class="container">
+          <div class="row">
+            <div class="col-12">
+              <header class="section-header">
+                <h2 class="section-header__title">Distributed Joins Are Easy and Fast</h2>
+                <p class="section-header__lead">Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.</p>
+              </header>
+              <div class="demo-console">
+                <header class="demo-console__header">
+                  <h5 class="demo-console__title">Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.</h5>
+                </header><!-- Start Demo section -->
+<div class="codepen from-bottom ng-cloak" ng-app="darthGraph" ng-controller="GraphMagic">
+    <div class="codepen__header">
+    </div>
+    <div class="codepen__body">
+        <ul class=querytabs>
+            <li ng-repeat='tab in examples' ng-click='activate($index)' class="{{tab.active ? 'active' : ''}}">
+                <button ng-click='activate($index)'>{{ tab.title}}</button>
+            </li>
+            <span class="powered-badge">Powered by Dgraph</span>
+        </ul>
+        <div class=query>
+            <div ui-ace="{
+                 useWrapMode : true,
+                 showGutter: false,
+                 theme:'tomorrow_night_eighties',
+                 mode: 'javascript',
+                 onLoad: queryEditorLoaded,
+                 require: ['ace/ext/language_tools'],
+                 advanced: {
+                     enableSnippets: false,
+                     enableBasicAutocompletion: true,
+                     enableLiveAutocompletion: true
+                 },
+               }" ng-model="active_tab.code" class=editor></div>
+            <div class=float>
+                <!-- <button class="positive">Run Query</button> -->
+                <button ng-click="reset_example_code()" class="danger" ng-class="{hidden: active_tab.code == active_tab.sample_code}">Undo Changes</button>
+            </div>
+        </div>
+        <div class=result>
+            <span class='spinner' ng-show="isNetPending()">
+              <i class="fa fa-spinner icon-myspin"></i>
+              Processing...
+          </span>
+            <table class="latencycontainer" ng-hide="isNetPending()">
+                <tr class="entities">
+                    <td>Entities found</td>
+                    <td>:</td>
+                    <td>{{latency_data.entity_count}}</td>
+                </tr>
+                <tr class="total">
+                    <td>Server latency</td>
+                    <td>:</td>
+                    <td>{{ latency_data.total }}</td>
+                </tr>
+                <tr>
+                    <td class="processing">Processing</td>
+                    <td>:</td>
+                    <td>{{latency_data.processing}}</td>
+                </tr>
+                <tr>
+                    <td class="jsongen">JSON Conversion</td>
+                    <td>:</td>
+                    <td>{{latency_data.json}}</td>
+                </tr>
+            </table>
+            <div class="tabcontainer">
+                <h2 class="resulttab" ng-class="{active: result_json}" ng-click="result_json=true">
+                  json
+              </h2>
+                <h2 class="resulttab" ng-class="{active:!result_json}" ng-click="result_json=false">
+                  tree
+              </h2>
+            </div>
+            <div ui-ace="{
+                  useWrapMode : true,
+                  showGutter: false,
+                  readOnly: true,
+                  theme:'tomorrow_night_eighties',
+                  mode: 'javascript',
+                  onLoad: responseEditorLoaded,
+               }" readonly ng-model="json_result" ng-show="result_json" class=editor></div>
+            <div class="tree" ng-if="!result_json">
+                <tree obj="tree_result" expanded="true"></tree>
+                <div ng-if="!tree_result">query result is not available</div>
+            </div>
+            <div ng-if="had_network_error" style="color:#f2777a">Error talking to server</div>
+        </div>
+    </div>
+    <script type="text/ng-template" id="tree_node.html">
+        <div ng-if="obj" class="treenode">
+            <div class="title" ng-click="expanded=!expanded">
+                {{summary.title}}
+            </div>
+            <div ng-if="expanded" ng-repeat="field in fields" class="field">
+                <div class="atomvalue"> {{field.value}}</div>
+                <div class="objvalue">
+                    <tree ng-if="field.subobj" obj="field.subobj" expanded="false"></tree>
+                    <div ng-if="field.array">
+                        <div class="arraysummary" ng-if="!field.expanded" ng-click="field.expanded=true">
+                            <i class="fa fa-plus-circle"></i> {{field.array.length}} item{{field.array.length!=1?'s':''}}
+                        </div>
+                        <div ng-if="field.expanded">
+                            <div class="arrayoutline" ng-click="field.expanded=false">
+                                <i class="fa fa-minus-circle"></i> {{field.array.length}} item{{field.array.length!=1?'s':''}}
+                            </div>
+                            <table>
+                                <tr ng-repeat="el in field.array track by el._uid_">
+                                    <td>{{$index}}&nbsp;</td>
+                                    <td>
+                                        <tree ng-class-odd='"odd"' obj="el" expanded="false"></tree>
+                                    </td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</div>
+<!-- /codepen -->
+<!-- End Demo section -->
+
+              </div>
+              <!-- /.demo-console-->
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- /.demo-->
+    </div>
+    <!-- /.demo__wrapper-->
+    <div class="dg-testimonials bg-dim">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <h2 class="section-header dg-testimonials__header">What Users Are Saying</h2>
+            <div id="dg-testimonials__carousel" data-ride="carousel" class="carousel slide">
+              <div role="listbox" class="carousel-inner">
+                <div class="carousel-item dg-testimonials__item active">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut</div>
+                <div class="carousel-item dg-testimonials__item">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                <div class="carousel-item dg-testimonials__item">Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
+              </div><a href="#dg-testimonials__carousel" role="button" data-slide="prev" class="carousel-control-prev"><i class="fa fa-arrow-left"></i><span class="sr-only">	Previous</span></a><a href="#dg-testimonials__carousel" role="button" data-slide="next" class="carousel-control-next"><i class="fa fa-arrow-right"></i><span class="sr-only">Next</span></a>
+              <ol class="carousel-indicators">
+                <li data-target="#dg-testimonials__carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="1"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="2"></li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="cta-wrapper cta-wrapper--homepage">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="cta">
+              <div class="cta__box">
+                <h4 class="cta__title">Download Dgraph</h4>
+                <p>Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.</p><a href="https://docs.dgraph.io" target="_blank" class="button button--white button--jumbo cta__button">Official Documentation</a>
+              </div>
+              <div class="cta__more">
+                <h4 class="cta__title">More information about Dgraph</h4>
+                <ul class="cta__more-list">
+                  <li class="cta__more-item"><a href="https://github.com/dgraph-io/dgraph/" target="_blank" class="cta__more-link cta__more-link--github">GitHub</a></li>
+                  <li class="cta__more-item"><a href="https://discuss.dgraph.io" target="_blank" class="cta__more-link cta__more-link--discourse">Discourse</a></li>
+                  <li class="cta__more-item"><a href="https://slack.dgraph.io/" target="_blank" class="cta__more-link cta__more-link--slack">Slack</a></li>
+                  <li class="cta__more-item"><a href="https://open.dgraph.io" target="_blank" class="cta__more-link cta__more-link--blog">Blog</a></li>
+                  <li class="cta__more-item"><a href="https://docs.dgraph.io" target="_blank" class="cta__more-link cta__more-link--wiki">Documentation</a></li>
+                </ul>
+              </div>
+              <!-- /.cta-->
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="page-footer__wrapper">

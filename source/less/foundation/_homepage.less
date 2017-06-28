@@ -135,12 +135,12 @@
         margin-bottom: @spacing-medium;
     }
     &__list {
-        margin: @spacing-small 0 0;
-        padding: 0;
+        // margin: @spacing-small 0 0;
+        // padding: 0;
         .clearfix();
-        @media screen and (min-width: @tablet-breakpoint) {
-            margin: @spacing-base -15px 0;
-        }
+        // @media screen and (min-width: @tablet-breakpoint) {
+        //     margin: @spacing-base -15px 0;
+        // }
     }
     &__item {
         text-align: center;
@@ -549,8 +549,27 @@
 }
 
 .dg-introduction {
-  padding: 129px 0;
+  padding: 54px 0;
   text-align: center;
+
+  .divider {
+    margin-top: 2.3em;
+    margin-bottom: 3.3em;
+  }
+
+  .dg-introduction-desc {
+    text-align: left;
+    padding: 7px 15px;
+
+    .heading {
+      font-size: 1.3em;
+      margin-bottom: 24px;
+    }
+
+    .desc {
+      line-height: 31px;
+    }
+  }
 }
 
 .vertical-overlap {
@@ -562,27 +581,33 @@
 // }
 
 .page-content {
-  &__features {
-    height: 100px;
+  &__features-container {
+    padding-bottom: 54px;
     position: relative;
 
     &:before {
       position: absolute;
       content: '';
       pointer-events: none;
-      top: -63px;
+      top: -125px;
       left: -25%;
-      z-index: -1;
       width: 150%;
-      height: 75%;
-      background: inherit;
-      transform: rotate(-2deg);
-      transform-origin: 0 0;
-      height: 53%;
+      height: 55%;
       background: #ffffff;
       transform: rotate(2deg);
       transform-origin: 3% 0;
-      z-index: 5;
+      z-index: 2;
     }
   }
+
+  &__features-content {
+    z-index: 3;
+  }
+}
+
+.divider {
+  height: 2px;
+  background: #252525;
+  width: 5%;
+  margin: auto;
 }

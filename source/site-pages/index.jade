@@ -62,124 +62,125 @@ block page-intro
 
 block page-content
 
-	.page-content__features
+	.page-content__features-container
+		.container.page-content__features-content
+			ul.dg-features__list
+				li.dg-features__item
+					.dg-features__figure
+						img(src="assets/images/homepage/feature-01.svg", alt="Image for low latency, high throughput feature").dg-features__image
+					.dg-features__description
+						h4.dg-features__title Low Latency, High Throughput
+						p Low enough latency to serve real time queries over terabytes of structured data.
+				li.dg-features__item
+					.dg-features__figure
+						img(src="assets/images/homepage/feature-02.svg", alt="Image for distributed and scalable feature").dg-features__image
+					.dg-features__description
+						h4.dg-features__title Distributed and Scalable
+						p Easily scale to multiple machines thanks to the sharded storage and minimal network calls.
+				li.dg-features__item
+					.dg-features__figure
+						img(src="assets/images/homepage/feature-03.svg", alt="Image for open source feature").dg-features__image
+					.dg-features__description
+						h4.dg-features__title Open Source
+						p Written entirely in Go, Dgraph is available under open-source license.
+			// /.demo-features
+
+
+
+	.dg-introduction
+		h2
+			| Built to scale horizontally for your big ideas
+			
+		.divider
+
 		.container
-			| features
+			.row
+				.col-6
+					iframe(width='560', height='315', src='https://www.youtube.com/embed/cHXbYLNa0qQ', frameborder='0', allowfullscreen='')
+				.col-6
+					.dg-introduction-desc
+						h3.heading
+							| Distributed by design.
+						p.desc
+							| Dgraph can easily scale to multiple machines, or datacenters. Its sharded storage and query processing were specifically designed to minimize the number of network calls.
+							
+						a.btn.btn-primary(href="https://docs.dgraph.io/faq/" target="_blank")
+							| Learn More 
+							i.fa.fa-arrow-right
 
-
-	//- 
-	//- 
-	//- .dg-features
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				ul.dg-features__list
-	//- 					li.dg-features__item
-	//- 						.dg-features__figure
-	//- 							img(src="assets/images/homepage/feature-01.svg", alt="Image for low latency, high throughput feature").dg-features__image
-	//- 						.dg-features__description
-	//- 							h4.dg-features__title Low Latency, High Throughput
-	//- 							p Low enough latency to serve real time queries over terabytes of structured data.
-	//- 					li.dg-features__item
-	//- 						.dg-features__figure
-	//- 							img(src="assets/images/homepage/feature-02.svg", alt="Image for distributed and scalable feature").dg-features__image
-	//- 						.dg-features__description
-	//- 							h4.dg-features__title Distributed and Scalable
-	//- 							p Easily scale to multiple machines thanks to the sharded storage and minimal network calls.
-	//- 					li.dg-features__item
-	//- 						.dg-features__figure
-	//- 							img(src="assets/images/homepage/feature-03.svg", alt="Image for open source feature").dg-features__image
-	//- 						.dg-features__description
-	//- 							h4.dg-features__title Open Source
-	//- 							p Written entirely in Go, Dgraph is available under open-source license.
-	//- 				// /.demo-features
-	//- 
-	//- .dg-introduction.bg-dim
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				h2.section-header
-	//- 					| Why Dgraph?
-	//- 					p.section-header__lead
-	//- 						| Dgraph is a graph database built to scale horizontally. Its sharded storage and query processing were specifically designed to minimize the number of network calls.
-	//- 					
-	//- 					a.btn.btn-primary(href="https://docs.dgraph.io/faq/" target="_blank")
-	//- 						| Learn More 
-	//- 						i.fa.fa-arrow-right
-	//- 
-	//- 
-	//- .demo__wrapper.hidden-xs-down
-	//- 	.demo
-	//- 		.container
-	//- 			.row
-	//- 				.col-12
-	//- 					header.section-header
-	//- 						h2.section-header__title See for Yourself
-	//- 						p.section-header__lead Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.
-	//- 
-	//- 					.demo-console
-	//- 						header.demo-console__header
-	//- 							h5.demo-console__title Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.
-	//- 
-	//- 						include partials/demo-section/demo.html
-	//- 
-	//- 					// /.demo-console
-	//- 	// /.demo
-	//- // /.demo__wrapper
-	//- 
-	//- 
-	//- .dg-testimonials.bg-dim
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				h2.section-header.dg-testimonials__header What Users Say
-	//- 				
-	//- 				#dg-testimonials__carousel.carousel.slide(data-ride='carousel')
-	//- 					.carousel-inner(role='listbox')
-	//- 						.carousel-item.dg-testimonials__item.active
-	//- 							| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-	//- 						.carousel-item.dg-testimonials__item
-	//- 							| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-	//- 						.carousel-item.dg-testimonials__item
-	//- 							| Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-	//- 					a.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
-	//- 						i.fa.fa-arrow-left
-	//- 						span.sr-only	Previous
-	//- 					a.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
-	//- 						i.fa.fa-arrow-right
-	//- 						span.sr-only Next
-	//- 						
-	//- 					ol.carousel-indicators
-	//- 						li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
-	//- 						li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
-	//- 						li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
-	//- 						
-	//- .cta-wrapper.cta-wrapper--homepage
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				.cta
-	//- 					.cta__box
-	//- 						h4.cta__title Download Dgraph
-	//- 						p Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.
-	//- 
-	//- 						a(href="https://docs.dgraph.io" target="_blank").button.button--white.button--jumbo.cta__button Official Documentation
-	//- 
-	//- 					.cta__more
-	//- 						h4.cta__title More information about Dgraph
-	//- 						ul.cta__more-list
-	//- 							li.cta__more-item
-	//- 								a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github GitHub
-	//- 							li.cta__more-item
-	//- 								a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse Discourse
-	//- 							li.cta__more-item
-	//- 								a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack Slack
-	//- 							li.cta__more-item
-	//- 								a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog Blog
-	//- 							li.cta__more-item
-	//- 								a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki Documentation
-	//- 
-	//- 					// /.cta
+	
+	.demo__wrapper.hidden-xs-down
+		.demo
+			.container
+				.row
+					.col-12
+						header.section-header
+							h2.section-header__title Distributed Joins Are Easy and Fast
+							p.section-header__lead Dgraph can run complex distributed queries involving filters, string matching, pagination, sorting and geolocations blazingly fast.
+	
+						.demo-console
+							header.demo-console__header
+								h5.demo-console__title Play with 21M facts from <a href="https://developers.google.com/freebase/" target="_blank">Freebase Film Data</a> loaded up on demo Dgraph instance, via <a href="https://docs.dgraph.io/master/query-language/" target="_blank">GraphQL+-</a> in real time.
+	
+							include partials/demo-section/demo.html
+	
+						// /.demo-console
+		// /.demo
+	// /.demo__wrapper
+	
+	
+	.dg-testimonials.bg-dim
+		.container
+			.row
+				.col-12
+					h2.section-header.dg-testimonials__header What Users Are Saying
+					
+					#dg-testimonials__carousel.carousel.slide(data-ride='carousel')
+						.carousel-inner(role='listbox')
+							.carousel-item.dg-testimonials__item.active
+								| Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
+							.carousel-item.dg-testimonials__item
+								| Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							.carousel-item.dg-testimonials__item
+								| Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						a.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
+							i.fa.fa-arrow-left
+							span.sr-only	Previous
+						a.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
+							i.fa.fa-arrow-right
+							span.sr-only Next
+							
+						ol.carousel-indicators
+							li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
+							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
+							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
+							
+	.cta-wrapper.cta-wrapper--homepage
+		.container
+			.row
+				.col-12
+					.cta
+						.cta__box
+							h4.cta__title Download Dgraph
+							p Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.
+	
+							a(href="https://docs.dgraph.io" target="_blank").button.button--white.button--jumbo.cta__button Official Documentation
+	
+						.cta__more
+							h4.cta__title More information about Dgraph
+							ul.cta__more-list
+								li.cta__more-item
+									a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github GitHub
+								li.cta__more-item
+									a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse Discourse
+								li.cta__more-item
+									a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack Slack
+								li.cta__more-item
+									a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog Blog
+								li.cta__more-item
+									a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki Documentation
+	
+						// /.cta
 
 	//- .media
 	//- 	.container

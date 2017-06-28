@@ -1676,8 +1676,6 @@ hr {
   }
 }
 .dg-features__list {
-  margin: 25px 0 0;
-  padding: 0;
   zoom: 1;
 }
 .dg-features__list:before,
@@ -1687,11 +1685,6 @@ hr {
 }
 .dg-features__list:after {
   clear: both;
-}
-@media screen and (min-width: 767px) {
-  .dg-features__list {
-    margin: 60px -15px 0;
-  }
 }
 .dg-features__item {
   text-align: center;
@@ -2106,37 +2099,54 @@ hr {
   color: black;
 }
 .dg-introduction {
-  padding: 129px 0;
+  padding: 54px 0;
   text-align: center;
+}
+.dg-introduction .divider {
+  margin-top: 2.3em;
+  margin-bottom: 3.3em;
+}
+.dg-introduction .dg-introduction-desc {
+  text-align: left;
+  padding: 7px 15px;
+}
+.dg-introduction .dg-introduction-desc .heading {
+  font-size: 1.3em;
+  margin-bottom: 24px;
+}
+.dg-introduction .dg-introduction-desc .desc {
+  line-height: 31px;
 }
 .vertical-overlap {
   height: 500px;
 }
-.page-content__features {
-  height: 100px;
+.page-content__features-container {
+  padding-bottom: 54px;
   position: relative;
 }
-.page-content__features:before {
+.page-content__features-container:before {
   position: absolute;
   content: '';
   pointer-events: none;
-  top: -63px;
+  top: -125px;
   left: -25%;
-  z-index: -1;
   width: 150%;
-  height: 75%;
-  background: inherit;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
-  -webkit-transform-origin: 0 0;
-          transform-origin: 0 0;
-  height: 53%;
+  height: 55%;
   background: #ffffff;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
   -webkit-transform-origin: 3% 0;
           transform-origin: 3% 0;
-  z-index: 5;
+  z-index: 2;
+}
+.page-content__features-content {
+  z-index: 3;
+}
+.divider {
+  height: 2px;
+  background: #252525;
+  width: 5%;
+  margin: auto;
 }
 /* ===========================================
    About page styling
@@ -4074,7 +4084,8 @@ img[data-src] {
   color: white;
   text-transform: uppercase;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 700;
+  letter-spacing: 0.5px;
 }
 .page-intro__nav-item a:hover {
   color: white;
@@ -4089,7 +4100,7 @@ img[data-src] {
   margin-right: auto;
 }
 .page-intro__logo {
-  width: 266px;
+  width: 259px;
   margin-top: 28px;
 }
 .page-intro__desc {
@@ -4190,19 +4201,14 @@ img[data-src] {
 }
 @media screen and (min-width: 989px) {
   .page-intro__main {
-    min-height: 700px;
+    min-height: 740px;
   }
 }
 .page-intro--homepage {
   position: relative;
-  z-index: 5;
+  z-index: 1;
   min-height: 450px;
   margin-bottom: 0;
-}
-@media screen and (min-width: 989px) {
-  .page-intro--homepage {
-    min-height: 700px;
-  }
 }
 .page-intro--homepage .page-intro__lead {
   display: inline-block;

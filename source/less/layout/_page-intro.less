@@ -63,7 +63,8 @@
 			color: white;
 			text-transform: uppercase;
 			font-size: 14px;
-			font-weight: 600;
+			font-weight: 700;
+	    letter-spacing: 0.5px;
 		}
 
 		a:hover {
@@ -83,7 +84,7 @@
 	}
 
 	&__logo {
-		width: 266px;
+    width: 259px;
     margin-top: 28px;
 	}
 
@@ -193,19 +194,16 @@
   &__main {
     background: linear-gradient(to bottom right, #ff6928, #ff0000);
     @media screen and (min-width: @desktop-breakpoint) {
-      min-height: 700px;
+      min-height: 740px;
     }
   }
 
 	&--homepage {
 		position: relative;
-		z-index: 5;
+    z-index: 1;
 		min-height: 450px;
 		margin-bottom: 0;
 		// background-image: url('../images/homepage/bg.svg');
-		@media screen and (min-width: @desktop-breakpoint) {
-	    min-height: 700px;
-		}
 
 		.page-intro__lead {
 	    display: inline-block;
