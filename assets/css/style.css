@@ -2101,6 +2101,19 @@ hr {
 .dg-testimonials .carousel-indicators li.active:after {
   background: black;
 }
+.dg-testimonials .carousel-item {
+  height: 70px;
+}
+.dg-testimonials .carousel-control-prev:focus,
+.dg-testimonials .carousel-control-next:focus {
+  color: black;
+  text-decoration: none;
+}
+.dg-testimonials .carousel-control-prev:hover,
+.dg-testimonials .carousel-control-next:hover {
+  color: black;
+  text-decoration: none;
+}
 .dg-testimonials .carousel-inner {
   width: 74%;
   margin-left: auto;
@@ -4259,8 +4272,8 @@ img[data-src] {
   clear: both;
 }
 .page-intro__main {
-  background: -webkit-linear-gradient(top left, #ff6928, #ff0000);
-  background: linear-gradient(to bottom right, #ff6928, #ff0000);
+  background: -webkit-linear-gradient(top left, #ff570e, #7d0000);
+  background: linear-gradient(to bottom right, #ff570e, #7d0000);
   min-height: 555px;
 }
 @media screen and (min-width: 767px) {
