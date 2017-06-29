@@ -4334,7 +4334,8 @@ img[data-src] {
   opacity: 1;
   background: rgba(156, 47, 8, 0.25);
   width: inherit;
-  text-align: left;
+  right: 0;
+  text-align: center;
 }
 .sub-menu li {
   margin-bottom: 0;
