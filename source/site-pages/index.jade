@@ -30,22 +30,29 @@ block page-intro
 			.row.hidden-xs-down
 				.col-12
 					.page-intro__nav-container
-						ul.page-intro__nav-list
+						ul
 							li.page-intro__nav-item
-								a(href="https://docs.dgraph.io" target="_blank") 
-									span.label Docs
+								a.page-intro__nav-link(href="https://github.com/dgraph-io" target="_blank") Code
+							li.page-intro__nav-item.sub-menu-parent
+								a.page-intro__nav-link.page-intro__nav-dropdown-trigger(href='#') Read
+								ul.sub-menu
+									li
+										a(href="https://docs.dgraph.io" target="_blank") Docs
+									li
+										a(href="https://open.dgraph.io" target="_blank") Blog
+									li
+										a(href="https://tour.dgraph.io" target="_blank") Tutorials
+							li.page-intro__nav-item.sub-menu-parent
+								a.page-intro__nav-link.page-intro__nav-dropdown-trigger(href='#') Talk
+								ul.sub-menu
+									li
+										a(href="https://slack.dgraph.io" target="_blank") Slack
+									li
+										a(href="https://discuss.dgraph.io" target="_blank") Forum
 							li.page-intro__nav-item
-								a(href="https://open.dgraph.io" target="_blank")
-									span.label Blog
-							li.page-intro__nav-item
-								a(href="https://discuss.dgraph.io" target="_blank")
-									span.label Forum
-							li.page-intro__nav-item
-								a(href="https://slack.dgraph.io" target="_blank")
-									span.label Slack
-							li.page-intro__nav-item
-								a(href="https://docs.dgraph.io/get-started/" target="_blank")
-									span.label Install
+								a.page-intro__nav-link(href="https://docs.dgraph.io/get-started/" target="_blank") Install
+
+
 			.row
 				.col-sm-6.col-md-5.offset-md-1.hidden-xs-down
 					.page-intro__intro-section

@@ -4121,7 +4121,7 @@ img[data-src] {
   margin-bottom: 0;
   height: 100%;
 }
-.page-intro__nav-item a {
+.page-intro__nav-link {
   height: 100%;
   display: -webkit-inline-box;
   display: inline-flex;
@@ -4134,15 +4134,18 @@ img[data-src] {
   letter-spacing: .2px;
   font-size: 14px;
 }
+.page-intro__nav-link:hover {
+  color: white;
+}
+.page-intro__nav-link:focus {
+  color: white;
+}
 @media screen and (min-width: 989px) {
-  .page-intro__nav-item a {
+  .page-intro__nav-link {
     padding: 0 13.5px;
     letter-spacing: 0.5px;
     font-size: 14.5px;
   }
-}
-.page-intro__nav-item a:hover {
-  color: white;
 }
 .page-intro__intro-section {
   text-align: center;
@@ -4309,6 +4312,58 @@ img[data-src] {
 }
 .bg-dim {
   background-color: #fafbfd;
+}
+.sub-menu-parent {
+  position: relative;
+}
+.sub-menu {
+  visibility: hidden;
+  /* hides sub-menu */
+  opacity: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  -webkit-transform: translateY(-2em);
+          transform: translateY(-2em);
+  z-index: -1;
+  -webkit-transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+          transition: all 0.3s ease-in-out 0s, visibility 0s linear 0.3s, z-index 0s linear 0.01s;
+  list-style: none;
+  padding-left: 0;
+  opacity: 1;
+  background: rgba(156, 47, 8, 0.25);
+  width: inherit;
+  text-align: left;
+}
+.sub-menu li {
+  margin-bottom: 0;
+}
+.sub-menu a {
+  color: white;
+  text-transform: uppercase;
+  font-weight: 700;
+  padding: 7px 10.5px;
+  letter-spacing: .2px;
+  font-size: 12px;
+  display: inline-block;
+}
+.sub-menu a:hover {
+  color: white;
+}
+.sub-menu a:focus {
+  color: white;
+}
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible;
+  /* shows sub-menu */
+  opacity: 1;
+  z-index: 1;
+  -webkit-transform: translateY(0%);
+          transform: translateY(0%);
+  -webkit-transition-delay: 0s, 0s, 0.3s;
+          transition-delay: 0s, 0s, 0.3s;
+  /* this removes the transition delay so the menu will be visible while the other styles transition */
 }
 /* ===========================================
    Page content styling

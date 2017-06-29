@@ -282,4 +282,12 @@ $(document).ready(function() {
   }
 
   setHeaderVisibility();
+
+  // ===========================================================================
+  //
+  // navigation
+
+  $(document).on("click", ".page-intro__nav-dropdown-trigger", function(e) {
+    e.preventDefault();
+  });
 }); // end document ready
