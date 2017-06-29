@@ -245,7 +245,7 @@ $(document).ready(function() {
       window.innerWidth || 0
     );
 
-    return w <= mobileWidthBreakpoint;
+    return w <= mobileWidthBreakpoint || window.location.pathname !== "/";
   }
 
   function setHeaderVisibility() {
@@ -277,8 +277,6 @@ $(document).ready(function() {
     );
 
     window.addEventListener("resize", setHeaderVisibility);
-  } else {
-    $(".page-header__header").addClass("visible");
   }
 
   setHeaderVisibility();
