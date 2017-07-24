@@ -2186,6 +2186,12 @@ hr {
   width: 5%;
   margin: auto;
 }
+.github-star-container {
+  display: inline-block;
+  position: absolute;
+  right: 0;
+  top: 36px;
+}
 /* ===========================================
    About page styling
    =========================================== */
@@ -4115,12 +4121,18 @@ img[data-src] {
   padding-left: 0;
   margin-bottom: 0;
   height: 100%;
-  display: inline-block;
+  display: -webkit-box;
+  display: flex;
+  -webkit-box-pack: center;
+          justify-content: center;
 }
 .page-intro__nav-item {
   display: inline-block;
   margin-bottom: 0;
   height: 100%;
+}
+.page-intro__nav-item iframe {
+  margin: 0 10px;
 }
 .page-intro__nav-link {
   height: 100%;
@@ -4276,8 +4288,8 @@ img[data-src] {
   clear: both;
 }
 .page-intro__main {
-  background: -webkit-linear-gradient(top left, #ff570e, #7d0000);
-  background: linear-gradient(to bottom right, #ff570e, #7d0000);
+  background: -webkit-linear-gradient(top left, #ff6e2f, #900000);
+  background: linear-gradient(to bottom right, #ff6e2f, #900000);
   min-height: 555px;
 }
 @media screen and (min-width: 767px) {

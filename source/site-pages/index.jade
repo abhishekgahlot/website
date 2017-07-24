@@ -26,13 +26,17 @@ block partials
 
 block page-intro
 	.page-intro__main
+	
 		.container
 			.row.hidden-xs-down
 				.col-12
 					.page-intro__nav-container
+						.github-star-container
+							a.github-button(href='https://github.com/dgraph-io/dgraph', data-size='large', data-show-count='true', aria-label='Star dgraph-io/dgraph on GitHub') Star
+
 						ul
 							li.page-intro__nav-item
-								a.page-intro__nav-link(href="https://github.com/dgraph-io" target="_blank") Code
+								a.page-intro__nav-link(href="https://github.com/dgraph-io/dgraph" target="_blank") Code
 							li.page-intro__nav-item.sub-menu-parent
 								a.page-intro__nav-link.page-intro__nav-dropdown-trigger(href='#') Read
 								ul.sub-menu

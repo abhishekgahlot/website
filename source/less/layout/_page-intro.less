@@ -34,13 +34,18 @@
     padding-left: 0;
     margin-bottom: 0;
     height: 100%;
-    display: inline-block;
+    display: flex;
+    justify-content: center;
   }
 
   &__nav-item {
     display: inline-block;
     margin-bottom: 0;
     height: 100%;
+
+    iframe {
+      margin: 0 10px;
+    }
   }
 
   &__nav-link {
@@ -200,7 +205,7 @@
 
 .page-intro {
   &__main {
-    background: linear-gradient(to bottom right, #ff570e, #7d0000);
+    background: linear-gradient(to bottom right, #ff6e2f, #900000);
     min-height: 555px;
 
     @media screen and (min-width: @tablet-breakpoint) {
