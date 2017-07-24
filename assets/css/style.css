@@ -1799,7 +1799,7 @@ hr {
   z-index: 5;
 }
 .usage-carousel__controls .icon {
-  fill: #00ADF2;
+  fill: #00adf2;
   width: 30px;
   height: 30px;
   -webkit-transition: 0.2s fill ease-in-out;
@@ -2155,6 +2155,7 @@ hr {
 .page-content__features-container {
   padding-bottom: 54px;
   position: relative;
+  padding-top: 61px;
 }
 .page-content__features-container:before {
   position: absolute;
@@ -2173,7 +2174,7 @@ hr {
 }
 @media screen and (min-width: 767px) {
   .page-content__features-container:before {
-    top: -125px;
+    top: -74px;
   }
 }
 .page-content__features-content {
