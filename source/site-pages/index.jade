@@ -58,7 +58,7 @@ block page-intro
 
 
 			.row
-				.col-sm-6.col-md-5.offset-md-1.hidden-xs-down
+				.col-sm-6.col-md-5.offset-md-1.hidden-xs
 					.page-intro__intro-section
 						img.diggy(src="assets/images/homepage/diggy-shadow.png")
 				.col-12.col-sm-6.col-md-5
@@ -70,7 +70,7 @@ block page-intro
 							
 						p.page-intro__desc
 							
-						a.btn.btn-primary.hidden-md(href="https://docs.dgraph.io/get-started/" target="_blank")
+						a.btn.btn-primary.visible-xs-inline-block(href="https://docs.dgraph.io/get-started/" target="_blank")
 							span.label Try It
 
 block page-content
@@ -121,7 +121,7 @@ block page-content
 							i.fa.fa-arrow-right
 
 	
-	.demo__wrapper.hidden-xs-down
+	.demo__wrapper.hidden-xs
 		.demo
 			.container
 				.row
@@ -149,6 +149,11 @@ block page-content
 					h2.section-header.dg-testimonials__header What Users Are Saying
 						
 					#dg-testimonials__carousel.carousel.slide(data-ride='carousel')
+						ol.carousel-indicators
+							li.active(data-target='#dg-testimonials__carousel', data-slide-to='0')
+							li(data-target='#dg-testimonials__carousel', data-slide-to='1')
+							li(data-target='#dg-testimonials__carousel', data-slide-to='2')
+
 						// Wrapper for slides
 						.carousel-inner(role='listbox')
 							.carousel-item.item.dg-testimonials__item.active
@@ -164,54 +169,30 @@ block page-content
 							i.fa.fa-arrow-right
 							span.sr-only Next
 
-						ol.carousel-indicators
-							li.active(data-target='#dg-testimonials__carousel', data-slide-to='0')
-							li(data-target='#dg-testimonials__carousel', data-slide-to='1')
-							li(data-target='#dg-testimonials__carousel', data-slide-to='2')
-					
-					//- #dg-testimonials__carousel.carousel.slide(data-ride='carousel')
-					//- 	.carousel-inner(role='listbox')
-					//- 		.carousel-item.dg-testimonials__item.active
-					//- 			| I have worked extensively with Titan, some with Neo4j, and played around with Cayley, and Dgraph was fastest for the way I am doing things.
-					//- 		.carousel-item.dg-testimonials__item
-					//- 			| Dgraph's performance is ridiculously fast.
-					//- 		.carousel-item.dg-testimonials__item
-					//- 			| This is really exciting. I've been hoping for a robust, distributed open source Graph database ever since Firebase
-					//- 	a.carousel-control.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
-					//- 		i.fa.fa-arrow-left
-					//- 		span.sr-only	Previous
-					//- 	a.carousel-control.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
-					//- 		i.fa.fa-arrow-right
-					//- 		span.sr-only Next
-					//- 		
-					//- 	ol.carousel-indicators
-					//- 		li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
-					//- 		li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
-					//- 		li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
-
-	.media
+	.press
 		.container
 			.row
 				.col-12
-					// /.media-inline
-					.media-logo
-						.media-logo__row
-							.media-logo__item
+					h2.section-header Dgraph in the News
+					// /.press-inline
+					.press-logo
+						.press-logo__row
+							.press-logo__item
 								a.hn(href="")
-									img(src="assets/images/in-news/hn.jpg", alt="Hacker News")
-							.media-logo__item
+									img(src="assets/images/in-news/hn-alt.png", alt="Hacker News")
+							.press-logo__item
 								a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")
 									img(src="assets/images/in-news/fr.jpg", alt="Financial Review")
-							.media-logo__item
+							.press-logo__item
 								a(href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank")
 									img(src="assets/images/in-news/ss.jpg", alt="Startup Smart")
 					div.hn-list
-						ul.media__list
-							li.media__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").media__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
-							li.media__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").media__link Dgraph is a next generation graph database with GraphQL as the query language
-							li.media__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").media__link Scaling nodes in a Dgraph cluster
-					// /.media-logo
-	// /.media
+						ul.press__list
+							li.press__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").press__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
+							li.press__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").press__link Dgraph is a next generation graph database with GraphQL as the query language
+							li.press__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").press__link Scaling nodes in a Dgraph cluster
+					// /.press-logo
+	// /.press
 
 block additional-scripts
 	// JavaScript files for Demo section

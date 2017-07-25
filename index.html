@@ -111,13 +111,13 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-sm-6 col-md-5 offset-md-1 hidden-xs-down">
+          <div class="col-sm-6 col-md-5 offset-md-1 hidden-xs">
             <div class="page-intro__intro-section"><img src="assets/images/homepage/diggy-shadow.png" class="diggy"></div>
           </div>
           <div class="col-12 col-sm-6 col-md-5">
             <div class="page-intro__intro-section"><img src="assets/images/logo-glow.png" class="page-intro__logo">
               <h1 class="page-intro--homepage__title">Fastest graph database in the market.</h1>
-              <p class="page-intro__desc"></p><a href="https://docs.dgraph.io/get-started/" target="_blank" class="btn btn-primary hidden-md"><span class="label">Try It</span></a>
+              <p class="page-intro__desc"></p><a href="https://docs.dgraph.io/get-started/" target="_blank" class="btn btn-primary visible-xs-inline-block"><span class="label">Try It</span></a>
             </div>
           </div>
         </div>
@@ -173,7 +173,7 @@
         </div>
       </div>
     </div>
-    <div class="demo__wrapper hidden-xs-down">
+    <div class="demo__wrapper hidden-xs">
       <div class="demo">
         <div class="container">
           <div class="row">
@@ -315,47 +315,48 @@
           <div class="col-12">
             <h2 class="section-header dg-testimonials__header">What Users Are Saying</h2>
             <div id="dg-testimonials__carousel" data-ride="carousel" class="carousel slide">
+              <ol class="carousel-indicators">
+                <li data-target="#dg-testimonials__carousel" data-slide-to="0" class="active"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="1"></li>
+                <li data-target="#dg-testimonials__carousel" data-slide-to="2"></li>
+              </ol>
               <!-- Wrapper for slides-->
               <div role="listbox" class="carousel-inner">
                 <div class="carousel-item item dg-testimonials__item active">I have worked extensively with Titan, some with Neo4j, and played around with Cayley, and Dgraph was fastest for the way I am doing things.</div>
                 <div class="carousel-item item dg-testimonials__item">Dgraph's performance is ridiculously fast.</div>
                 <div class="carousel-item item dg-testimonials__item">This is really exciting. I've been hoping for a robust, distributed open source Graph database ever since Firebase</div>
               </div><a href="#dg-testimonials__carousel" role="button" data-slide="prev" class="left carousel-control carousel-control-prev"><i class="fa fa-arrow-left"></i><span class="sr-only">Previous</span></a><a href="#dg-testimonials__carousel" role="button" data-slide="next" class="right carousel-control carousel-control-prev"><i class="fa fa-arrow-right"></i><span class="sr-only">Next</span></a>
-              <ol class="carousel-indicators">
-                <li data-target="#dg-testimonials__carousel" data-slide-to="0" class="active"></li>
-                <li data-target="#dg-testimonials__carousel" data-slide-to="1"></li>
-                <li data-target="#dg-testimonials__carousel" data-slide-to="2"></li>
-              </ol>
             </div>
           </div>
         </div>
       </div>
     </div>
-    <div class="media">
+    <div class="press">
       <div class="container">
         <div class="row">
           <div class="col-12">
-            <!-- /.media-inline-->
-            <div class="media-logo">
-              <div class="media-logo__row">
-                <div class="media-logo__item"><a href="" class="hn"><img src="assets/images/in-news/hn.jpg" alt="Hacker News"></a></div>
-                <div class="media-logo__item"><a href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank"><img src="assets/images/in-news/fr.jpg" alt="Financial Review"></a></div>
-                <div class="media-logo__item"><a href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank"><img src="assets/images/in-news/ss.jpg" alt="Startup Smart"></a></div>
+            <h2 class="section-header">Dgraph in the News</h2>
+            <!-- /.press-inline-->
+            <div class="press-logo">
+              <div class="press-logo__row">
+                <div class="press-logo__item"><a href="" class="hn"><img src="assets/images/in-news/hn-alt.png" alt="Hacker News"></a></div>
+                <div class="press-logo__item"><a href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank"><img src="assets/images/in-news/fr.jpg" alt="Financial Review"></a></div>
+                <div class="press-logo__item"><a href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank"><img src="assets/images/in-news/ss.jpg" alt="Startup Smart"></a></div>
               </div>
             </div>
             <div class="hn-list">
-              <ul class="media__list">
-                <li class="media__item"><a href="https://news.ycombinator.com/item?id=11322444" target="_blank" class="media__link">DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database</a></li>
-                <li class="media__item"><a href="https://news.ycombinator.com/item?id=11934087" target="_blank" class="media__link">Dgraph is a next generation graph database with GraphQL as the query language</a></li>
-                <li class="media__item"><a href="https://news.ycombinator.com/ item?id=11944969" target="_blank" class="media__link">Scaling nodes in a Dgraph cluster</a></li>
+              <ul class="press__list">
+                <li class="press__item"><a href="https://news.ycombinator.com/item?id=11322444" target="_blank" class="press__link">DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database</a></li>
+                <li class="press__item"><a href="https://news.ycombinator.com/item?id=11934087" target="_blank" class="press__link">Dgraph is a next generation graph database with GraphQL as the query language</a></li>
+                <li class="press__item"><a href="https://news.ycombinator.com/ item?id=11944969" target="_blank" class="press__link">Scaling nodes in a Dgraph cluster</a></li>
               </ul>
             </div>
-            <!-- /.media-logo-->
+            <!-- /.press-logo-->
           </div>
         </div>
       </div>
     </div>
-    <!-- /.media-->
+    <!-- /.press-->
   </div>
   <div class="page-footer__wrapper">
     <footer id="page-footer" class="page-footer">
