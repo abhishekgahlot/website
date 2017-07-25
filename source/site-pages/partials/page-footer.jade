@@ -2,9 +2,8 @@
 	footer#page-footer.page-footer
 		.container
 			.row
-				.col-4.col-tablet-2
+				.col-12
 						nav.page-footer-nav
-							h6.page-footer-nav__title Company
 							ul.page-footer-nav__list
 								li.page-footer-nav__item
 									a(href="about.html" title="Learn more about us").page-footer-nav__link About
@@ -15,31 +14,15 @@
 								li.page-footer-nav__item
 									a(href="https://docs.dgraph.io", title="Download Dgraph." target="_blank").page-footer-nav__link.page-footer-nav__link--download Download
 
-				.col-4.col-tablet-2
-						nav.page-footer-nav
-							h6.page-footer-nav__title Community
-							ul.page-footer-nav__list
-								li.page-footer-nav__item
-									a(href="https://open.dgraph.io" title="Thoughts on usage of graph database." target="_blank").page-footer-nav__link Blog
-								li.page-footer-nav__item
-									a(href="https://tour.dgraph.io" title="Tour of Dgraph" target="_blank").page-footer-nav__link Tour
-								li.page-footer-nav__item
-									a(href="https://docs.dgraph.io" title="Discuss about Dgraph with us." target="_blank").page-footer-nav__link Documentation
-								li.page-footer-nav__item
-									a(href="https://github.com/dgraph-io/dgraph" alt="Dgraph on Github" title="We are on GitHub, check it out." target="_blank").page-footer-nav__link GitHub
-								li.page-footer-nav__item
-									a(href="https://discuss.dgraph.io/" title="Discuss about Dgraph with us." target="_blank").page-footer-nav__link Discuss
-								li.page-footer-nav__item
-									a(href="https://slack.dgraph.io/" title="Slack about Dgraph with us." target="_blank").page-footer-nav__link Slack
 
-				.col-4.col-tablet-2
-						nav.page-footer-nav
-							h6.page-footer-nav__title Connect
-							ul.page-footer-nav__list
-								li.page-footer-nav__item
-									a(href="https://twitter.com/dgraphlabs", title="Follow us on Twitter" target="_blank").page-footer-nav__link Twitter
-								li.page-footer-nav__item
-									a(href="https://angel.co/dgraph-labs", title="Dgraph on Angel List" target="_blank").page-footer-nav__link Angel List
+			.row
+				.col-12
+					.page-footer__social
+						ul.page-footer__social-link-list
+							li.page-footer__social-link-item
+								a.twitter-follow-button(href='https://twitter.com/dgraphlabs', data-show-count='true') Follow @dgraphlabs
+							li.page-footer__social-link-item
+								a.github-button(href='https://github.com/dgraph-io/dgraph', data-show-count='true', aria-label='Star dgraph-io/dgraph on GitHub') Star
 
 			.row
 				.col-12

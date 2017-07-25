@@ -653,8 +653,12 @@
 }
 
 .github-star-container {
-  display: inline-block;
+  display: none;
   position: absolute;
   right: 0;
   top: 36px;
+
+  @media screen and (min-width: @desktop-breakpoint) {
+    display: inline-block;
+  }
 }

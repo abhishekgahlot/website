@@ -238,63 +238,16 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  // ===========================================================================
-  //
-  // Scrollspy for header navigation
-
-  var mobileWidthBreakpoint = 425;
-
-  function shouldDisplayHeader() {
-    var w = Math.max(
-      document.documentElement.clientWidth,
-      window.innerWidth || 0
-    );
-
-    return w <= mobileWidthBreakpoint || window.location.pathname !== "/";
-  }
-
-  function setHeaderVisibility() {
-    if (shouldDisplayHeader()) {
-      $(".page-header__header").addClass("visible");
-    } else {
-      $(".page-header__header").removeClass("visible");
-    }
-  }
-
-  function maybeToggleHeaderVisibility() {
-    if (shouldDisplayHeader()) {
-      return;
-    }
-
-    var currentScrollY = document.body.scrollTop;
-
-    if (currentScrollY > 418) {
-      $(".page-header__header").addClass("visible");
-    } else {
-      $(".page-header__header").removeClass("visible");
-    }
-  }
-
   if (window.location.pathname === "/") {
-    window.addEventListener(
-      "scroll",
-      debounce(maybeToggleHeaderVisibility, 20)
-    );
-
-    window.addEventListener("resize", setHeaderVisibility);
+    var typed = new Typed(".page-intro__desc", {
+      strings: [
+        "Meet Dgraph —  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production."
+      ],
+      startDelay: 200,
+      typeSpeed: 8,
+      showCursor: false
+    });
   }
-
-  setHeaderVisibility();
-
-  // typed.js
-  var typed = new Typed(".page-intro__desc", {
-    strings: [
-      "Meet Dgraph —  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production."
-    ],
-    startDelay: 200,
-    typeSpeed: 8,
-    showCursor: false
-  });
 
   // ===========================================================================
   //

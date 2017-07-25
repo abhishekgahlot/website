@@ -2187,10 +2187,15 @@ hr {
   margin: auto;
 }
 .github-star-container {
-  display: inline-block;
+  display: none;
   position: absolute;
   right: 0;
   top: 36px;
+}
+@media screen and (min-width: 989px) {
+  .github-star-container {
+    display: inline-block;
+  }
 }
 /* ===========================================
    About page styling
@@ -4001,37 +4006,21 @@ img[data-src] {
   background: #ffffff;
   position: relative;
   z-index: 5;
-  margin-top: 80px;
   text-align: center;
-}
-@media screen and (min-width: 989px) {
-  .page-footer {
-    margin-top: 180px;
-  }
+  padding-top: 18px;
 }
 .page-footer__wrapper {
   position: relative;
+  border-top: 2px solid #f0f0f0;
 }
-.page-footer__wrapper:before {
-  content: '';
-  display: block;
-  width: 3500px;
-  height: 200px;
-  position: absolute;
-  background: #fff;
-  -webkit-transform: rotate(4deg);
-          transform: rotate(4deg);
-  left: -10%;
-  top: -70px;
-  right: 0;
-  z-index: 4;
-  pointer-events: none;
-  box-shadow: 0 0 50px rgba(0, 0, 0, 0.15);
+.page-footer__social-link-list {
+  list-style: none;
+  padding-left: 0;
+  margin-bottom: 0;
 }
-@media screen and (max-width: 989px) {
-  .page-footer__wrapper:before {
-    top: 40px;
-  }
+.page-footer__social-link-item {
+  display: inline-block;
+  margin: 0 8px;
 }
 @media screen and (max-width: 767px) {
   .page-logo-footer {
@@ -4055,9 +4044,14 @@ img[data-src] {
   }
 }
 .page-footer-nav__item {
-  display: block;
+  display: inline-block;
   list-style-type: none;
   padding: 0;
+}
+.page-footer-nav__item:not(:last-child):after {
+  content: '|';
+  margin: 0 11px;
+  color: #d0d0d0;
 }
 .page-footer-nav__link {
   font-size: 15px;
@@ -4080,9 +4074,9 @@ img[data-src] {
 .imprint__copyrights {
   font-size: 15px;
   font-size: 0.9375rem;
-  color: #cccccc;
+  color: #adadad;
   display: block;
-  margin-top: 80px;
+  margin-top: 35px;
   margin-bottom: 25px;
 }
 @media screen and (max-width: 767px) {

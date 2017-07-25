@@ -167,58 +167,30 @@ block page-content
 							li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
 							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
-							
-	// TODO: The final section should be license details, enterprise version
-	.cta-wrapper.cta-wrapper--homepage
+
+	.media
 		.container
 			.row
 				.col-12
-					.cta
-						.cta__box
-							h4.cta__title Download Dgraph
-							p Install Dgraph binaries quickly in a single step using this command if you are on Linux/Mac: <code> curl https://get.dgraph.io | bash</code> For other methods of installing Dgraph check out our documentation.
-	
-							a(href="https://docs.dgraph.io" target="_blank").button.button--white.button--jumbo.cta__button Official Documentation
-	
-						.cta__more.hidden-xs-down
-							h4.cta__title More information about Dgraph
-							ul.cta__more-list
-								li.cta__more-item
-									a(href="https://github.com/dgraph-io/dgraph/" target="_blank").cta__more-link.cta__more-link--github GitHub
-								li.cta__more-item
-									a(href="https://discuss.dgraph.io" target="_blank").cta__more-link.cta__more-link--discourse Discourse
-								li.cta__more-item
-									a(href="https://slack.dgraph.io/" target="_blank").cta__more-link.cta__more-link--slack Slack
-								li.cta__more-item
-									a(href="https://open.dgraph.io" target="_blank").cta__more-link.cta__more-link--blog Blog
-								li.cta__more-item
-									a(href="https://docs.dgraph.io" target="_blank").cta__more-link.cta__more-link--wiki Documentation
-	
-						// /.cta
-
-	//- .media
-	//- 	.container
-	//- 		.row
-	//- 			.col-12
-	//- 				// /.media-inline
-	//- 				.media-logo
-	//- 					.media-logo__row
-	//- 						.media-logo__item
-	//- 							a.hn(href="")
-	//- 								img(src="assets/images/in-news/hn.jpg", alt="Hacker News")
-	//- 						.media-logo__item
-	//- 							a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")
-	//- 								img(src="assets/images/in-news/fr.jpg", alt="Financial Review")
-	//- 						.media-logo__item
-	//- 							a(href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank")
-	//- 								img(src="assets/images/in-news/ss.jpg", alt="Startup Smart")
-	//- 				div.hn-list
-	//- 					ul.media__list
-	//- 						li.media__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").media__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
-	//- 						li.media__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").media__link Dgraph is a next generation graph database with GraphQL as the query language
-	//- 						li.media__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").media__link Scaling nodes in a Dgraph cluster
-	//- 				// /.media-logo
-	//- // /.media
+					// /.media-inline
+					.media-logo
+						.media-logo__row
+							.media-logo__item
+								a.hn(href="")
+									img(src="assets/images/in-news/hn.jpg", alt="Hacker News")
+							.media-logo__item
+								a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")
+									img(src="assets/images/in-news/fr.jpg", alt="Financial Review")
+							.media-logo__item
+								a(href="http://www.startupsmart.com.au/advice/funding/two-failed-startups-later-ex-google-employee-secures-1-45-million-in-funding-and-backing-of-atlassians-co-founder/" target="_blank")
+									img(src="assets/images/in-news/ss.jpg", alt="Startup Smart")
+					div.hn-list
+						ul.media__list
+							li.media__item: a(href="https://news.ycombinator.com/item?id=11322444" target="_blank").media__link DGraph – Scalable, Distributed, Low-Latency, High-Throughput Graph Database
+							li.media__item: a(href="https://news.ycombinator.com/item?id=11934087" target="_blank").media__link Dgraph is a next generation graph database with GraphQL as the query language
+							li.media__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").media__link Scaling nodes in a Dgraph cluster
+					// /.media-logo
+	// /.media
 
 block additional-scripts
 	// JavaScript files for Demo section
