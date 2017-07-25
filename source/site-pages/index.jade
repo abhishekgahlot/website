@@ -70,7 +70,7 @@ block page-intro
 							
 						p.page-intro__desc
 							
-						a.btn.btn-primary.hidden-sm-up(href="https://docs.dgraph.io/get-started/" target="_blank")
+						a.btn.btn-primary.hidden-md(href="https://docs.dgraph.io/get-started/" target="_blank")
 							span.label Try It
 
 block page-content
@@ -147,26 +147,47 @@ block page-content
 			.row
 				.col-12
 					h2.section-header.dg-testimonials__header What Users Are Saying
-					
+						
 					#dg-testimonials__carousel.carousel.slide(data-ride='carousel')
+						// Wrapper for slides
 						.carousel-inner(role='listbox')
-							.carousel-item.dg-testimonials__item.active
+							.carousel-item.item.dg-testimonials__item.active
 								| I have worked extensively with Titan, some with Neo4j, and played around with Cayley, and Dgraph was fastest for the way I am doing things.
-							.carousel-item.dg-testimonials__item
+							.carousel-item.item.dg-testimonials__item
 								| Dgraph's performance is ridiculously fast.
-							.carousel-item.dg-testimonials__item
+							.carousel-item.item.dg-testimonials__item
 								| This is really exciting. I've been hoping for a robust, distributed open source Graph database ever since Firebase
-						a.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
+						a.left.carousel-control.carousel-control-prev(href='#dg-testimonials__carousel', role='button', data-slide='prev')
 							i.fa.fa-arrow-left
-							span.sr-only	Previous
-						a.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
+							span.sr-only Previous
+						a.right.carousel-control.carousel-control-prev(href='#dg-testimonials__carousel', role='button', data-slide='next')
 							i.fa.fa-arrow-right
 							span.sr-only Next
-							
+
 						ol.carousel-indicators
-							li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
-							li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
-							li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
+							li.active(data-target='#dg-testimonials__carousel', data-slide-to='0')
+							li(data-target='#dg-testimonials__carousel', data-slide-to='1')
+							li(data-target='#dg-testimonials__carousel', data-slide-to='2')
+					
+					//- #dg-testimonials__carousel.carousel.slide(data-ride='carousel')
+					//- 	.carousel-inner(role='listbox')
+					//- 		.carousel-item.dg-testimonials__item.active
+					//- 			| I have worked extensively with Titan, some with Neo4j, and played around with Cayley, and Dgraph was fastest for the way I am doing things.
+					//- 		.carousel-item.dg-testimonials__item
+					//- 			| Dgraph's performance is ridiculously fast.
+					//- 		.carousel-item.dg-testimonials__item
+					//- 			| This is really exciting. I've been hoping for a robust, distributed open source Graph database ever since Firebase
+					//- 	a.carousel-control.carousel-control-prev(href='#dg-testimonials__carousel',	role='button',	data-slide='prev')
+					//- 		i.fa.fa-arrow-left
+					//- 		span.sr-only	Previous
+					//- 	a.carousel-control.carousel-control-next(href='#dg-testimonials__carousel',	role='button',	data-slide='next')
+					//- 		i.fa.fa-arrow-right
+					//- 		span.sr-only Next
+					//- 		
+					//- 	ol.carousel-indicators
+					//- 		li.active(data-target='#dg-testimonials__carousel',	data-slide-to='0')
+					//- 		li(data-target='#dg-testimonials__carousel',	data-slide-to='1')
+					//- 		li(data-target='#dg-testimonials__carousel',	data-slide-to='2')
 
 	.media
 		.container

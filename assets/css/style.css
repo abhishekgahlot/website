@@ -1727,18 +1727,16 @@ hr {
 }
 .dg-features__description p {
   font-size: 15px;
-  font-size: 0.9375rem;
   line-height: 1.65;
   color: #a4958c;
   margin: 0;
 }
 .dg-features__title {
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 16px;
   text-transform: uppercase;
   line-height: 1.3;
   letter-spacing: .015em;
-  margin-bottom: 15px;
+  margin-bottom: 17px;
 }
 .usage {
   position: relative;
@@ -2095,14 +2093,18 @@ hr {
 .dg-testimonials .carousel-indicators {
   bottom: -62px;
 }
-.dg-testimonials .carousel-indicators li:after {
+.dg-testimonials .carousel-indicators li {
   background: #cccccc;
 }
-.dg-testimonials .carousel-indicators li.active:after {
+.dg-testimonials .carousel-indicators li.active {
   background: black;
 }
 .dg-testimonials .carousel-item {
   height: 70px;
+}
+.dg-testimonials .carousel-control.left,
+.dg-testimonials .carousel-control.right {
+  background: none;
 }
 .dg-testimonials .carousel-control-prev:focus,
 .dg-testimonials .carousel-control-next:focus {
@@ -2148,6 +2150,7 @@ hr {
 }
 .dg-introduction .dg-introduction-desc .desc {
   line-height: 31px;
+  font-size: 16px;
 }
 .vertical-overlap {
   height: 500px;
@@ -2164,7 +2167,7 @@ hr {
   top: -68px;
   left: -25%;
   width: 150%;
-  height: 55%;
+  height: 16%;
   background: #ffffff;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
@@ -4247,8 +4250,7 @@ img[data-src] {
   display: block;
 }
 .page-intro__lead {
-  font-size: 24px;
-  font-size: 1.5rem;
+  font-size: 20px;
   font-weight: 500;
   text-align: center;
   color: #a4958c;
@@ -4387,7 +4389,6 @@ img[data-src] {
 }
 .section-header__lead {
   font-size: 20px;
-  font-size: 1.25rem;
   font-weight: 500;
   line-height: 1.65;
   color: #a4958c;
