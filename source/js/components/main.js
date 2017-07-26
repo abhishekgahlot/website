@@ -174,11 +174,11 @@ $(document).ready(function() {
   });
 
   // Get latest blog post
-  var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
-  $.get(blogRSSEndpoint, function(xmlDoc) {
-    var items = xmlDoc.getElementsByTagName("item");
-
-    var recentItems = Array.prototype.slice.call(items, 0, 3);
-    console.log(recentItems.childNodes[0].nodeValue);
-  });
+  // var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
+  // $.get(blogRSSEndpoint, function(xmlDoc) {
+  //   var items = xmlDoc.getElementsByTagName("item");
+  //
+  //   var recentItems = Array.prototype.slice.call(items, 0, 3);
+  //   console.log(recentItems.childNodes[0].nodeValue);
+  // });
 }); // end document ready

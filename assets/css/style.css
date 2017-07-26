@@ -3980,7 +3980,7 @@ img[data-src] {
 }
 @media screen and (max-width: 767px) {
   .page-nav__list {
-    display: block;
+    display: none;
     position: absolute;
     left: -20px;
     right: -20px;
