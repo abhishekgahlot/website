@@ -69,6 +69,7 @@ block page-intro
 							| Fastest graph database in the market.
 							
 						p.page-intro__desc
+							| Meet Dgraph —  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production.
 
 block page-content
 
@@ -96,11 +97,6 @@ block page-content
 			// /.demo-features
 
 	.dg-introduction
-		h2
-			| Built to scale horizontally for your big ideas
-			
-		.divider
-
 		.container
 			.row
 				.col-12.col-sm-12.col-md-6
@@ -190,6 +186,39 @@ block page-content
 							li.press__item: a(href="https://news.ycombinator.com/ item?id=11944969" target="_blank").press__link Scaling nodes in a Dgraph cluster
 					// /.press-logo
 	// /.press
+
+	.blog-articles.is-loading.bg-dim
+		.container
+			.row
+				.col-12
+					h2.section-header Latest articles
+
+					.blog-article.blog-article-0
+						.meta
+							a.title.link(href="#" target="_blank")
+							.desc
+						.action
+							a.link(href="#" target="_blank") 
+								| Read more
+								i.fa.fa-angle-double-right
+						
+					.blog-article.blog-article-1
+						.meta
+							a.title.link(href="#" target="_blank")
+							.desc
+						.action
+							a.link(href="#" target="_blank") 
+								| Read more
+								i.fa.fa-angle-double-right
+						
+					.blog-article.blog-article-2
+						.meta
+							a.title.link(href="#" target="_blank")
+							.desc
+						.action
+							a.link(href="#" target="_blank") 
+								| Read more
+								i.fa.fa-angle-double-right
 
 block additional-scripts
 	// JavaScript files for Demo section

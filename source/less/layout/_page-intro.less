@@ -270,7 +270,7 @@
 }
 
 .bg-dim {
-  background-color: #fafbfd;
+  background-color: rgba(255, 211, 196, 0.09);
 }
 
 .sub-menu-parent {
@@ -327,4 +327,50 @@
   z-index: 1;
   transform: translateY(0%);
   transition-delay: 0s, 0s, 0.3s; /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+
+.blog-articles {
+  padding: 47px 0;
+
+  .section-header {
+    margin-bottom: 43px;
+  }
+
+  .blog-article {
+    vertical-align: top;
+    padding: 0 9px;
+    margin-bottom: 9px;
+    border-bottom: solid 2px #e2e2e2;
+    padding-bottom: 15px;
+
+    @media screen and (min-width: @desktop-breakpoint) {
+      width: 33%;
+      display: inline-block;
+      margin-bottom: 0;
+      border-right: solid 2px #e2e2e2;
+      border-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    &:last-child {
+      border-right: none;
+      border-bottom: none;
+    }
+
+    .title {
+      font-size: 20px;
+      font-weight: 500;
+      margin-bottom: 10px;
+      display: inline-block;
+      color: #2d2d2d;
+    }
+
+    .meta {
+      margin-bottom: 12px;
+    }
+  }
+
+  &.is-loading {
+    display: none;
+  }
 }

@@ -2175,7 +2175,7 @@ hr {
   display: none;
   position: absolute;
   right: 0;
-  top: 36px;
+  top: 34px;
 }
 @media screen and (min-width: 989px) {
   .github-star-container {
@@ -4048,11 +4048,6 @@ img[data-src] {
   padding: 25px 0;
   margin-bottom: 0;
 }
-@media screen and (max-width: 767px) {
-  .page-footer-nav__list {
-    padding-bottom: 0;
-  }
-}
 .page-footer-nav__item {
   display: inline-block;
   list-style-type: none;
@@ -4334,7 +4329,7 @@ img[data-src] {
   margin-bottom: 60px;
 }
 .bg-dim {
-  background-color: #fafbfd;
+  background-color: rgba(255, 211, 196, 0.09);
 }
 .sub-menu-parent {
   position: relative;
@@ -4388,6 +4383,46 @@ img[data-src] {
   -webkit-transition-delay: 0s, 0s, 0.3s;
           transition-delay: 0s, 0s, 0.3s;
   /* this removes the transition delay so the menu will be visible while the other styles transition */
+}
+.blog-articles {
+  padding: 47px 0;
+}
+.blog-articles .section-header {
+  margin-bottom: 43px;
+}
+.blog-articles .blog-article {
+  vertical-align: top;
+  padding: 0 9px;
+  margin-bottom: 9px;
+  border-bottom: solid 2px #e2e2e2;
+  padding-bottom: 15px;
+}
+@media screen and (min-width: 989px) {
+  .blog-articles .blog-article {
+    width: 33%;
+    display: inline-block;
+    margin-bottom: 0;
+    border-right: solid 2px #e2e2e2;
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+.blog-articles .blog-article:last-child {
+  border-right: none;
+  border-bottom: none;
+}
+.blog-articles .blog-article .title {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  display: inline-block;
+  color: #2d2d2d;
+}
+.blog-articles .blog-article .meta {
+  margin-bottom: 12px;
+}
+.blog-articles.is-loading {
+  display: none;
 }
 /* ===========================================
    Page content styling

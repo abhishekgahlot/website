@@ -22,6 +22,23 @@ function debounce(func, wait, immediate) {
   };
 }
 
+// stripHTML strips HTML
+function stripHTML(rawString) {
+  var div = document.createElement("div");
+  div.innerHTML = rawString;
+
+  return div.textContent || div.innerText || "";
+}
+
+// excerpt creates an excerpt from the string, given max length
+function excerpt(str, maxLen) {
+  if (str.length <= maxLen) {
+    return str;
+  }
+
+  return str.substring(0, maxLen) + "...";
+}
+
 $(document).ready(function() {
   // ===========================================================================
   //
@@ -146,17 +163,6 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  if (window.location.pathname === "/") {
-    var typed = new Typed(".page-intro__desc", {
-      strings: [
-        "Meet Dgraph —  an open source, scalable, distributed, highly available and fast graph database, designed from ground up to be run in production."
-      ],
-      startDelay: 200,
-      typeSpeed: 8,
-      showCursor: false
-    });
-  }
-
   // ===========================================================================
   //
   // carousel
@@ -174,11 +180,21 @@ $(document).ready(function() {
   });
 
   // Get latest blog post
-  // var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
-  // $.get(blogRSSEndpoint, function(xmlDoc) {
-  //   var items = xmlDoc.getElementsByTagName("item");
-  //
-  //   var recentItems = Array.prototype.slice.call(items, 0, 3);
-  //   console.log(recentItems.childNodes[0].nodeValue);
-  // });
+  var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
+  $.get(blogRSSEndpoint, function(data) {
+    $(data).find("item").slice(0, 3).each(function(idx) {
+      var item = $(this);
+      var title = item.find("title").text();
+      var link = item.find("link").text();
+      var desc = excerpt(stripHTML(item.find("description").text()), 200);
+
+      var $articleContainer = $(".blog-article-" + idx);
+      $articleContainer.find(".title").text(title);
+      $articleContainer.find(".desc").text(desc);
+      $articleContainer.find(".link").attr("href", link);
+    });
+
+    // Display
+    $(".blog-articles").removeClass("is-loading");
+  });
 }); // end document ready
