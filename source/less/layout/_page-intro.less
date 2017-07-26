@@ -71,15 +71,21 @@
       letter-spacing: 0.5px;
       font-size: 14.5px;
     }
+    @media screen and (min-width: @tablet-breakpoint) {
+      padding: 0 18.5px;
+    }
   }
 
   &__intro-section {
     text-align: center;
-    padding-top: 146px;
+    padding-top: 96px;
 
     @media screen and (min-width: @tablet-breakpoint) {
       padding-top: 86px;
       text-align: left;
+    }
+    @media screen and (min-width: @desktop-breakpoint) {
+      padding-top: 146px;
     }
 
     .diggy {
@@ -224,12 +230,15 @@
 
     &__title {
       text-transform: uppercase;
-      font-size: 1.1em;
       font-weight: 800;
       margin-top: 20px;
       line-height: 1.2em;
       color: white;
+      font-size: 2em;
 
+      @media screen and (min-width: @tablet-breakpoint) {
+        font-size: 1.1em;
+      }
       @media screen and (min-width: @desktop-breakpoint) {
         font-size: 1.9em;
       }

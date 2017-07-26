@@ -427,11 +427,23 @@
   &__row {
     .clearfix();
     padding: 47px 0;
-    display: flex;
-    align-items: center;
+
+    @media screen and (min-width: @tablet-breakpoint) {
+      display: flex;
+      align-items: center;
+    }
   }
   &__item {
-    flex: 1;
+    margin-bottom: 33px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
+    @media screen and (min-width: @tablet-breakpoint) {
+      flex: 1;
+      margin-bottom: 0;
+    }
 
     a {
       display: block;
@@ -627,13 +639,14 @@
       top: -68px;
       left: -25%;
       width: 150%;
-      height: 16%;
+      height: 10%;
       background: #ffffff;
       transform: rotate(2deg);
       transform-origin: 3% 0;
       z-index: 2;
 
       @media screen and (min-width: @tablet-breakpoint) {
+        height: 16%;
         top: -74px;
       }
     }

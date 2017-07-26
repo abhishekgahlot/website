@@ -1961,10 +1961,6 @@ hr {
 .press-logo__row {
   zoom: 1;
   padding: 47px 0;
-  display: -webkit-box;
-  display: flex;
-  -webkit-box-align: center;
-          align-items: center;
 }
 .press-logo__row:before,
 .press-logo__row:after {
@@ -1974,9 +1970,26 @@ hr {
 .press-logo__row:after {
   clear: both;
 }
+@media screen and (min-width: 767px) {
+  .press-logo__row {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: center;
+            align-items: center;
+  }
+}
 .press-logo__item {
-  -webkit-box-flex: 1;
-          flex: 1;
+  margin-bottom: 33px;
+}
+.press-logo__item:last-child {
+  margin-bottom: 0;
+}
+@media screen and (min-width: 767px) {
+  .press-logo__item {
+    -webkit-box-flex: 1;
+            flex: 1;
+    margin-bottom: 0;
+  }
 }
 .press-logo__item a {
   display: block;
@@ -2135,7 +2148,7 @@ hr {
   top: -68px;
   left: -25%;
   width: 150%;
-  height: 16%;
+  height: 10%;
   background: #ffffff;
   -webkit-transform: rotate(2deg);
           transform: rotate(2deg);
@@ -2145,6 +2158,7 @@ hr {
 }
 @media screen and (min-width: 767px) {
   .page-content__features-container:before {
+    height: 16%;
     top: -74px;
   }
 }
@@ -4148,14 +4162,24 @@ img[data-src] {
     font-size: 14.5px;
   }
 }
+@media screen and (min-width: 767px) {
+  .page-intro__nav-link {
+    padding: 0 18.5px;
+  }
+}
 .page-intro__intro-section {
   text-align: center;
-  padding-top: 146px;
+  padding-top: 96px;
 }
 @media screen and (min-width: 767px) {
   .page-intro__intro-section {
     padding-top: 86px;
     text-align: left;
+  }
+}
+@media screen and (min-width: 989px) {
+  .page-intro__intro-section {
+    padding-top: 146px;
   }
 }
 .page-intro__intro-section .diggy {
@@ -4290,11 +4314,16 @@ img[data-src] {
 }
 .page-intro--homepage__title {
   text-transform: uppercase;
-  font-size: 1.1em;
   font-weight: 800;
   margin-top: 20px;
   line-height: 1.2em;
   color: white;
+  font-size: 2em;
+}
+@media screen and (min-width: 767px) {
+  .page-intro--homepage__title {
+    font-size: 1.1em;
+  }
 }
 @media screen and (min-width: 989px) {
   .page-intro--homepage__title {

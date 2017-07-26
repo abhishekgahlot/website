@@ -34,7 +34,7 @@ block page-intro
 						.github-star-container
 							a.github-button(href='https://github.com/dgraph-io/dgraph', data-size='large', data-show-count='true', aria-label='Star dgraph-io/dgraph on GitHub') Star
 
-						ul
+						ul.page-intro__nav-list
 							li.page-intro__nav-item
 								a.page-intro__nav-link(href="https://github.com/dgraph-io/dgraph" target="_blank") Code
 							li.page-intro__nav-item.sub-menu-parent
@@ -69,9 +69,6 @@ block page-intro
 							| Fastest graph database in the market.
 							
 						p.page-intro__desc
-							
-						a.btn.btn-primary.visible-xs-inline-block(href="https://docs.dgraph.io/get-started/" target="_blank")
-							span.label Try It
 
 block page-content
 
@@ -121,7 +118,7 @@ block page-content
 							i.fa.fa-arrow-right
 
 	
-	.demo__wrapper.hidden-xs
+	.demo__wrapper.hidden-xs.hidden-sm
 		.demo
 			.container
 				.row
