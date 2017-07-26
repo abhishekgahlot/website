@@ -151,18 +151,6 @@ $(document).ready(function() {
     $(".article-comment__button").fadeOut();
   });
 
-  // For opening and closing HN news section
-
-  $(".hn").on("click", function(e) {
-    var list = $(".hn-list ul");
-    if (list.css("display") === "none") {
-      list.css("display", "inline-block");
-    } else {
-      list.css("display", "none");
-    }
-    e.preventDefault();
-  });
-
   // ===========================================================================
   //
   // carousel
