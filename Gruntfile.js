@@ -360,6 +360,13 @@ module.exports = function(grunt) {
           // but if you're working offline, you can reduce start-up time by setting this option to `false`.
         }
       }
+    },
+
+    sitemap: {
+      dist: {
+        pattern: ["*.html"],
+        siteRoot: "./"
+      }
     }
   });
 
@@ -379,6 +386,7 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks("grunt-contrib-jade");
   grunt.loadNpmTasks("grunt-contrib-copy");
   grunt.loadNpmTasks("grunt-browser-sync");
+  grunt.loadNpmTasks("grunt-sitemap");
 
   grunt.loadNpmTasks("grunt-newer");
   // Grunt-newer plugin increases task running speed.
@@ -394,7 +402,8 @@ module.exports = function(grunt) {
     "less",
     "postcss",
     "imagemin",
-    "svgstore"
+    "svgstore",
+    "sitemap"
   ]);
   // Build html files from jade files.
   grunt.registerTask("compile-html", ["jade"]);

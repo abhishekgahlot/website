@@ -7,6 +7,7 @@
     "type": "git",
     "url": "https://gitlab.com/sprawsm/dgraph.git"
   },
+  "homepage": "https://dgraph.io/",
   "private": true,
   "license": "GPL",
   "devDependencies": {
@@ -23,6 +24,7 @@
     "grunt-contrib-watch": "^0.6.1",
     "grunt-newer": "^1.1.0",
     "grunt-postcss": "^0.5.0",
+    "grunt-sitemap": "^1.2.1",
     "grunt-svgstore": "^0.5.0",
     "jade": "^1.9.2",
     "jshint-stylish": "^2.0.0",
