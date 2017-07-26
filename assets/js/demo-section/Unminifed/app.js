@@ -45,9 +45,9 @@ angular
                     "       }\n" +
                     "   }\n" +
                     "\n" +
-                    "   TopMovies(id: var(films), orderdesc: var(score), first: 10){\n" +
+                    "   TopMovies(func: uid(films), orderdesc: val(score), first: 10){\n" +
                     "       name@en\n" +
-                    "       var(score)\n" +
+                    "       val(score)\n" +
                     "   }\n" +
                     "}\n"
             },
@@ -55,7 +55,7 @@ angular
                 title: "Greater than equal",
                 sample_code: "" +
                     "{\n" +
-                    "  directed(id: m.0bxtg) {\n" +
+                    '  directed(func: eq(name@en, "Tom Hanks")) {\n' +
                     "    name@en\n" +
                     '    director.film @filter(ge(initial_release_date, "1970-01-01")) {\n' +
                     "      initial_release_date\n" +
@@ -82,7 +82,7 @@ angular
                 sample_code: "" +
                     "{\n" +
                     '   HP(func: allofterms(name@en, "Harry Potter")) @cascade{\n' +
-                    "       name\n" +
+                    "       name@en\n" +
                     "       starring{\n" +
                     '           performance.character@filter(allofterms(name@en, "harry")) {\n' +
                     "               name@en\n" +
@@ -98,13 +98,13 @@ angular
                 title: "Shortest Path",
                 sample_code: "" +
                     "{\n" +
-                    "   A as shortest(from: 0x3b0de646eaf32b75, to: 0x36692145960cfceb) {\n" +
+                    "   A as shortest(from: 0x599c0, to: 0x261d4) {\n" +
                     "       director.film\n" +
                     "       starring\n" +
                     "       performance.actor\n" +
                     "   }\n" +
                     "\n" +
-                    "   names(id: var(A)) {\n" +
+                    "   names(func: uid(A)) {\n" +
                     "       name@en\n" +
                     "   }\n" +
                     "}\n"
