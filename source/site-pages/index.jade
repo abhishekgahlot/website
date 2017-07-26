@@ -6,8 +6,8 @@ append page-config
 	- var PageClass = 'homepage'
 	- var PageIntroClass = 'homepage'
 	- var PageContentClass = 'homepage'
-	- var AlternateHeader = true
-
+	- var HideHeader = true
+	
 //- Begin
 block additional-styles
 	// CSS styles for Demo section
@@ -159,7 +159,7 @@ block page-content
 							.carousel-item.item.dg-testimonials__item.active
 								| I have worked extensively with Titan, some with Neo4j, and played around with Cayley, and Dgraph was fastest for the way I am doing things.
 							.carousel-item.item.dg-testimonials__item
-								| Dgraph's performance is ridiculously fast.
+								| Dgraph is so fast that its performance is almost ridiculous.
 							.carousel-item.item.dg-testimonials__item
 								| This is really exciting. I've been hoping for a robust, distributed open source Graph database ever since Firebase
 						a.left.carousel-control.carousel-control-prev(href='#dg-testimonials__carousel', role='button', data-slide='prev')
@@ -178,7 +178,7 @@ block page-content
 					.press-logo
 						.press-logo__row
 							.press-logo__item
-								a.hn(href="")
+								a.hn(href="https://news.ycombinator.com/item?id=11322444")
 									img(src="assets/images/in-news/hn-alt.png", alt="Hacker News")
 							.press-logo__item
 								a(href="http://www.afr.com/technology/cannonbrookes-blackbird-bain-back-new-migrants-graph-startup-20160517-goxglw" target="_blank")

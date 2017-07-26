@@ -161,12 +161,6 @@ $(document).ready(function() {
   //
   // carousel
 
-  window.onerror = function(err) {
-    console.log("caught an error!");
-    console.log(err);
-    console.log(err.error);
-  };
-
   $(document).on("click", ".carousel-control", function(e) {
     e.preventDefault();
   });
@@ -177,5 +171,14 @@ $(document).ready(function() {
 
   $(document).on("click", ".page-intro__nav-dropdown-trigger", function(e) {
     e.preventDefault();
+  });
+
+  // Get latest blog post
+  var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
+  $.get(blogRSSEndpoint, function(xmlDoc) {
+    var items = xmlDoc.getElementsByTagName("item");
+
+    var recentItems = Array.prototype.slice.call(items, 0, 3);
+    console.log(recentItems.childNodes[0].nodeValue);
   });
 }); // end document ready

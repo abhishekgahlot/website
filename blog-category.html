@@ -65,20 +65,27 @@
   -->
   <nav class="page-header__header">
     <div class="container">
-      <div class="page-header__content"><a href="/"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo"></a>
+      <div class="page-header__content"><a href="/" class="page-header__logo-container"><img src="assets/images/logo.png" alt="dgraph-logo" class="page-header__logo"></a><a href="javascript:void(0)" title="Site Navigation" id="page-nav-button" class="button page-nav-button">Menu</a>
         <div class="page-header__actions">
-          <ul class="page-header__menu-list hidden-xs-down">
-            <li class="page-header__menu-item"><a href="https://docs.dgraph.io" target="_blank"> <span class="label">Docs</span></a></li>
-            <li class="page-header__menu-item"><a href="https://tour.dgraph.io" target="_blank"> <span class="label">Tour</span></a></li>
-            <li class="page-header__menu-item"><a href="https://open.dgraph.io" target="_blank"><span class="label">Blog</span></a></li>
-            <li class="page-header__menu-item"><a href="https://discuss.dgraph.io" target="_blank"><span class="label">Forum</span></a></li>
-            <li class="page-header__menu-item"><a href="https://slack.dgraph.io" target="_blank"><span class="label">Slack</span></a></li>
-          </ul><a href="https://docs.dgraph.io/get-started/" target="_blank" class="page-header__cta btn btn-main btn-cta hidden-xs-down">Install</a><a href="https://docs.dgraph.io/" target="_blank" class="page-header__cta btn btn-main btn-cta hidden-md">Docs</a>
+          <ul class="page-header__menu-list page-nav__list">
+            <li class="page-header__menu-item hidden-xs"><a href="https://github.com/dgraph-io/dgraph" target="_blank">
+                 
+                Code</a></li>
+            <li class="page-header__menu-item hidden-xs"><a href="https://tour.dgraph.io" target="_blank">
+                 
+                Read</a></li>
+            <li class="page-header__menu-item hidden-xs"><a href="https://open.dgraph.io" target="_blank">Talk</a></li>
+            <li class="page-header__menu-item visible-xs-block"><a href="https://docs.dgraph.io" target="_blank">Docs</a></li>
+            <li class="page-header__menu-item visible-xs-block"><a href="https://open.dgraph.io" target="_blank">Blog</a></li>
+            <li class="page-header__menu-item visible-xs-block"><a href="https://discuss.dgraph.io" target="_blank">Forum</a></li>
+            <li class="page-header__menu-item visible-xs-block"><a href="https://slack.dgraph.io" target="_blank">Slack</a></li>
+            <li class="page-header__menu-item"><a href="https://open.dgraph.io" target="_blank">Install</a></li>
+          </ul>
+          <div class="gh-star-container hidden-sm hidden-xs"><a href="https://github.com/dgraph-io/dgraph" data-size="large" data-show-count="true" aria-label="Star dgraph-io/dgraph on GitHub" class="github-button">Star</a></div>
         </div>
       </div>
     </div>
   </nav>
-  <!-- / page-header-->
   <section class="page-intro page-intro--blog">
     <div class="container">
       <div class="row">
@@ -321,7 +328,6 @@
             <div class="page-footer__social">
               <ul class="page-footer__social-link-list">
                 <li class="page-footer__social-link-item"><a href="https://twitter.com/dgraphlabs" data-show-count="true" class="twitter-follow-button">Follow @dgraphlabs</a></li>
-                <li class="page-footer__social-link-item"><a href="https://github.com/dgraph-io/dgraph" data-show-count="true" aria-label="Star dgraph-io/dgraph on GitHub" class="github-button">Star</a></li>
               </ul>
             </div>
           </div>
@@ -336,7 +342,7 @@
   <!-- / page-footer__wrapper-->
 
   <!-- js-->
-  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>

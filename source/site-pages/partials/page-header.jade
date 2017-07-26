@@ -1,28 +1,42 @@
-nav.page-header__header
-	.container
-		.page-header__content
-			a(href="/")
-				img.page-header__logo(src='assets/images/logo.png', alt='dgraph-logo')
+if !HideHeader
+	nav.page-header__header
+		.container
+			.page-header__content
+				a.page-header__logo-container(href="/")
+					img.page-header__logo(src='assets/images/logo.png', alt='dgraph-logo')
+				
+				a(href="javascript:void(0)", title="Site Navigation")#page-nav-button.button.page-nav-button Menu
 
-			.page-header__actions
-				ul.page-header__menu-list.hidden-xs-down
-					li.page-header__menu-item
-						a(href="https://docs.dgraph.io" target="_blank") 
-							span.label Docs
-					li.page-header__menu-item
-						a(href="https://tour.dgraph.io" target="_blank") 
-							span.label Tour
-					li.page-header__menu-item
-						a(href="https://open.dgraph.io" target="_blank")
-							span.label Blog
-					li.page-header__menu-item
-						a(href="https://discuss.dgraph.io" target="_blank")
-							span.label Forum
-					li.page-header__menu-item
-						a(href="https://slack.dgraph.io" target="_blank")
-							span.label Slack
+				.page-header__actions
+					ul.page-header__menu-list.page-nav__list
+						li.page-header__menu-item.hidden-xs
+							a(href="https://github.com/dgraph-io/dgraph" target="_blank") 
+								| Code
+						li.page-header__menu-item.hidden-xs
+							a(href="https://tour.dgraph.io" target="_blank") 
+								| Read
+						li.page-header__menu-item.hidden-xs
+							a(href="https://open.dgraph.io" target="_blank")
+								| Talk
+						li.page-header__menu-item.visible-xs-block
+							a(href="https://docs.dgraph.io" target="_blank")
+								| Docs
+						li.page-header__menu-item.visible-xs-block
+							a(href="https://open.dgraph.io" target="_blank")
+								| Blog
+						li.page-header__menu-item.visible-xs-block
+							a(href="https://discuss.dgraph.io" target="_blank")
+								| Forum
+						li.page-header__menu-item.visible-xs-block
+							a(href="https://slack.dgraph.io" target="_blank")
+								| Slack
+						li.page-header__menu-item
+							a(href="https://open.dgraph.io" target="_blank")
+								| Install
 
-				a.page-header__cta.btn.btn-main.btn-cta.hidden-xs-down(href="https://docs.dgraph.io/get-started/" target="_blank") Install
-				a.page-header__cta.btn.btn-main.btn-cta.hidden-md(href="https://docs.dgraph.io/" target="_blank") Docs
 
-// / page-header
+					.gh-star-container.hidden-sm.hidden-xs
+						a.github-button(href='https://github.com/dgraph-io/dgraph', data-size='large', data-show-count='true', aria-label='Star dgraph-io/dgraph on GitHub') Star
+						
+
+				
