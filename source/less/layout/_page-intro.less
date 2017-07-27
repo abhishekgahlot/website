@@ -337,20 +337,30 @@
     margin-bottom: 43px;
   }
 
+  .blog-articles-container {
+    @media screen and (min-width: @desktop-breakpoint) {
+      display: flex;
+    }
+  }
+
   .blog-article {
     vertical-align: top;
-    padding: 0 9px;
+    padding: 0 10px;
     margin-bottom: 9px;
     border-bottom: solid 2px #e2e2e2;
     padding-bottom: 15px;
 
+    @media screen and (min-width: @tablet-breakpoint) {
+      padding: 0 21px;
+    }
+
     @media screen and (min-width: @desktop-breakpoint) {
-      width: 33%;
       display: inline-block;
       margin-bottom: 0;
       border-right: solid 2px #e2e2e2;
       border-bottom: 0;
       padding-bottom: 0;
+      flex: 1;
     }
 
     &:last-child {
@@ -368,6 +378,7 @@
 
     .meta {
       margin-bottom: 12px;
+      // height: 200px;
     }
   }
 

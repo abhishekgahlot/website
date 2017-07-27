@@ -4392,21 +4392,33 @@ img[data-src] {
 .blog-articles .section-header {
   margin-bottom: 43px;
 }
+@media screen and (min-width: 989px) {
+  .blog-articles .blog-articles-container {
+    display: -webkit-box;
+    display: flex;
+  }
+}
 .blog-articles .blog-article {
   vertical-align: top;
-  padding: 0 9px;
+  padding: 0 10px;
   margin-bottom: 9px;
   border-bottom: solid 2px #e2e2e2;
   padding-bottom: 15px;
 }
+@media screen and (min-width: 767px) {
+  .blog-articles .blog-article {
+    padding: 0 21px;
+  }
+}
 @media screen and (min-width: 989px) {
   .blog-articles .blog-article {
-    width: 33%;
     display: inline-block;
     margin-bottom: 0;
     border-right: solid 2px #e2e2e2;
     border-bottom: 0;
     padding-bottom: 0;
+    -webkit-box-flex: 1;
+            flex: 1;
   }
 }
 .blog-articles .blog-article:last-child {

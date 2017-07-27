@@ -177,7 +177,10 @@ $(document).ready(function() {
     e.preventDefault();
   });
 
-  // Get latest blog post
+  // ===========================================================================
+  //
+  // Fetch and display blog posts
+
   var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
   $.get(blogRSSEndpoint, function(data) {
     // Pick 3 random blog posts to show
