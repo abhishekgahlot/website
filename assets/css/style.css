@@ -4070,6 +4070,7 @@ img[data-src] {
 }
 .page-footer-nav__link--download {
   color: #f96315;
+  font-weight: 600;
 }
 .page-footer-nav__link--download:hover,
 .page-footer-nav__link--download:focus {
