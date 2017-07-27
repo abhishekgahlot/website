@@ -39,6 +39,16 @@ function excerpt(str, maxLen) {
   return str.substring(0, maxLen) + "...";
 }
 
+// pickRandomItems returns n random items from an array
+function pickRandomItems(arr, n) {
+  return arr
+    .slice()
+    .sort(function() {
+      return 0.5 - Math.random();
+    })
+    .slice(0, n + 1);
+}
+
 $(document).ready(function() {
   // ===========================================================================
   //
@@ -170,7 +180,11 @@ $(document).ready(function() {
   // Get latest blog post
   var blogRSSEndpoint = "https://open.dgraph.io/index.xml";
   $.get(blogRSSEndpoint, function(data) {
-    $(data).find("item").slice(0, 3).each(function(idx) {
+    // Pick 3 random blog posts to show
+    var items = $(data).find("item");
+    var itemsToDisplay = pickRandomItems(items, 3);
+
+    itemsToDisplay.each(function(idx) {
       var item = $(this);
       var title = item.find("title").text();
       var link = item.find("link").text();
