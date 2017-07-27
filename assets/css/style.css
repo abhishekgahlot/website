@@ -2072,10 +2072,11 @@ hr {
   margin-bottom: 32px;
 }
 .dg-testimonials .carousel-indicators li {
-  background: #cccccc;
+  background: #ff7e56;
+  border: none;
 }
 .dg-testimonials .carousel-indicators li.active {
-  background: black;
+  background: #f44336;
 }
 .dg-testimonials .carousel-item {
   height: 90px;
@@ -4330,7 +4331,7 @@ img[data-src] {
   margin-bottom: 60px;
 }
 .bg-dim {
-  background-color: rgba(255, 211, 196, 0.09);
+  background-color: #ffd4c4;
 }
 .sub-menu-parent {
   position: relative;
